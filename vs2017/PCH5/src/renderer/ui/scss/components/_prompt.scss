@@ -1,0 +1,31 @@
+.message,
+.notification {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  .media-content {
+    height: 100% !important;
+  }
+  .media {
+    padding-top: 0;
+    border: 0;
+  }
+}
+
+.prompt {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  z-index: 20;
+}
+
+.modal-background {
+  // -webkit-app-region: no-drag;
+}

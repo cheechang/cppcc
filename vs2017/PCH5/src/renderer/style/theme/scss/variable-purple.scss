@@ -1,0 +1,37 @@
+$--color-theme-purple: #e91e63 !important;
+$--color-light-theme-purple: #ff5890 !important;
+
+/*透明度效果，左侧导航毛玻璃效果需求*/
+$--color-transparency-large-purple: rgba(0, 0, 0, 0.4) !important;
+$--color-transparency-small-purple: rgba(235, 235, 235, 0.34);
+$--color-transparency-medium-purple: rgba(235, 235, 235, 0.14) !important; // 骨架屏颜色
+
+/*鼠标滑过背景颜色*/
+$--color-hover-theme-purple: rgba(255, 255, 255, 0.03);
+/*鼠标选中背景颜色*/
+$--color-active-theme-purple: rgba(255, 255, 255, 0.15) !important;
+// 子列表鼠标选中背景颜色
+$--color-child-item-active-theme-purple: rgba(255, 255, 255, 0.08)!important;
+
+/* 主题背景图 */
+$--background-img-theme-purple: url('~Theme/resource/purple/backgroundImg.webp');
+/* 水印主题背景图 */
+$--background-img-theme-mark-purple: url('~Theme/resource/purple/mark_backgroundImg.webp');
+
+/* 消息气泡颜色 */
+$--background-msgbuble-theme-purple: $--color-light-theme-purple;
+
+/* 主字体色 */
+$--color-text-primary-purple: #4a4a4a !default;
+/* 副字体色 */
+$--color-text-light-theme-purple: rgba(255, 255, 255, 0.75) !important;
+/* 浅色字体 */
+$--color-text-lighter-theme-puple: rgba(181, 181, 181, 0.81) !important;
+/* 极致浅色字体 */
+$--color-text-extra-light-theme-purple: #edf2fc !default;
+/* 可点击文本字体色 */
+$--color-text-hover-theme-purple: #2196F3 !default;
+/* 可点击文本字体色 */
+$--color-text-active-theme-purple: #1565C0 !default;
+
+

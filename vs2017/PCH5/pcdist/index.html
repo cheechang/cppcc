@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title></title>
+
+  <style>
+    @font-face {
+      font-family: 'antfill';
+      src: url('antfill.ttf');
+    }
+
+    @font-face {
+      font-family: 'antoutline';
+      src: url('antoutline.ttf');
+    }
+
+    /*@font-face {*/
+      /*font-family: 'system-ui';*/
+      /*src: url('msyh.ttf');*/
+    /*}*/
+
+    ::-webkit-scrollbar {
+      width: 2px;
+      height: 4px;
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+      background-color: rgba(150, 150, 150, 0.80);
+    }
+  </style>
+</head>
+
+<body ondragstart="return false;" style="margin: 0;padding: 0;">
+  <div id="root" style="display: flex;height: 100vh;overflow: hidden;"></div>
+  <script type="text/javascript" src="polyfill.js"></script>
+  <script type="text/javascript" src="qwebchannel.js"></script>
+  <script type="text/javascript" src="DatePicker/WdatePicker.js"></script>
+  <script type="text/javascript" src="bundle.js?v=20190822"></script>
+  <script>
+      /**
+       * pc端与 electron 通信
+       * @type {Electron.IpcRenderer}
+       */
+      window.ipcRenderer = require('electron').ipcRenderer;
+      ipcRenderer.on('webParent',(e,message)=>{
+          localStorage.setItem('loginInfoPc',message)
+      })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawShapeWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FullScreenWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_FullScreenWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_DrawShapeWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_res.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenShotClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_ScreenShotClient.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="DrawShapeWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FullScreenWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ScreenShotClient.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="image\screenShot\arrow_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\arrow_up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\box.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\box_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\box_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\cacel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\cacel_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\cacel_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color1_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color2_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color3_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color4_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color5_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color6_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color7.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color7_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color8.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color8_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color9.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color9_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color10.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color10_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color11.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color11_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color12.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color12_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color13.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color13_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color14.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color14_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color15.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color15_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color16.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\color16_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\corlorbg.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\devide.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot1_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot1_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot2_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot2_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot3_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\dot3_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\exit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\exit_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\exit_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\finish.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\finish_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\finish_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\fontsize1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\fontsize1_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\fontsize1_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\mouse.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\paintedArrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\paintedArrow_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\paintedArrow_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\path.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\path_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\path_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\ring.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\ring_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\ring_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\save.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\save_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\save_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\screenshotbg.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\selectcolor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\septal_line.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\text.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\text_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\text_enter.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="image\screenShot\textEditboder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="screenshot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="screenshot.rc" />
+  </ItemGroup>
+</Project>

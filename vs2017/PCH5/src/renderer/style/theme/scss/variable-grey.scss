@@ -1,0 +1,35 @@
+$--color-theme-grey: rgb(66, 66, 66) !important;
+$--color-light-theme-grey: #767171 !important;
+
+/*透明度效果，左侧导航毛玻璃效果需求*/
+$--color-transparency-large-grey: rgba(255, 255, 255, 0.6) !important;
+$--color-transparency-small-grey: rgba(152, 152, 152, 0.67);
+$--color-transparency-medium-grey: rgba(118, 113, 113, 0.3) !important; // 骨架屏颜色
+
+/*鼠标滑过背景颜色*/
+$--color-hover-theme-grey: rgba(0,0,0,.05);
+/*鼠标选中背景颜色*/
+$--color-active-theme-grey: rgba(0, 0, 0, 0.10) !important;
+// 子列表鼠标选中背景颜色
+$--color-child-item-active-theme-grey: rgba(0, 0, 0, 0.07)!important;
+
+/* 主题背景图 */
+$--background-img-theme-grey: url('~Theme/resource/grey/backgroundImg.webp');
+/* 水印主题背景图 */
+$--background-img-theme-mark-grey: url('~Theme/resource/grey/mark_backgroundImg.webp');
+
+/* 消息气泡颜色 */
+$--background-msgbuble-theme-grey: $--color-light-theme-grey;
+
+/* 主字体色 */
+$--color-text-theme-grey: #4a4a4a !default;
+/* 副字体色 */
+$--color-text-light-theme-grey: #424242 !important;
+/* 浅色字体 */
+$--color-text-lighter-theme-grey: #767676 !important;
+/* 极致浅色字体 */
+$--color-text-extra-light-theme-grey: #edf2fc !default;
+/* 可点击文本字体色 */
+$--color-text-hover-theme-grey: #2196F3 !default;
+/* 可点击文本字体色 */
+$--color-text-active-theme-grey: #1565C0 !default;

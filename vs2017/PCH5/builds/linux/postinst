@@ -1,0 +1,28 @@
+#!/bin/bash
+
+loginNames=`who | awk '{print $1}' | uniq`
+for loginName in $loginNames
+do
+  echo "the loginName [ $loginName ]"
+  homeDir=`cat /etc/passwd | grep $loginName | awk -F: '{print $6}'`
+
+  zhDesktop=$homeDir/桌面
+  chDesktop=$homeDir/Desktop
+  if [ -d "$zhDesktop" ]; then
+      cp /usr/share/applications/Linkdood.desktop $zhDesktop/
+      chown $loginName $zhDesktop/Linkdood.desktop
+      chgrp $loginName $zhDesktop/Linkdood.desktop
+      chmod +x $zhDesktop/Linkdood.desktop
+  fi 
+
+  if [ -d "$chDesktop" ]; then
+      cp /usr/share/applications/Linkdood.desktop $chDesktop/
+      chown $loginName $chDesktop/Linkdood.desktop
+      chgrp $loginName $chDesktop/Linkdood.desktop
+      chmod +x $chDesktop/Linkdood.desktop
+  fi 
+
+done
+
+export LD_LIBRARY_PATH=/opt/Linkdood:$LD_LIBRARY_PATH
+

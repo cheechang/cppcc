@@ -1,0 +1,10 @@
+.mx-table-date {
+ td,
+ th {
+   height: 32px;
+   font-size: 12px;
+   line-height: 32px;
+   text-align: center;
+ }
+}
+@import '~vue2-datepicker/scss/index.scss';

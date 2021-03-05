@@ -1,0 +1,66 @@
+{
+  "serviceIp": "https://mediasoup.linkdood.cn:3000",
+  "preLogin": {
+    "loginWayList":[
+      { 
+        "way":"手机号",
+        "type":1
+      },
+      { 
+        "way":"邮箱账号",
+        "type":3
+      },
+      {
+        "way": "豆豆号",
+        "type": 4
+      },
+      {
+        "way": "自定义账号",
+        "type": 7
+      }
+    ],
+    "server": "im",
+    "nationCode": "0086"
+  },
+  "auth": {
+    "isEnableRegistry": 1,
+    "isEDPRegistry": 0
+  },
+  "chat": {
+    "edit": {
+      "isMode": true,
+      "mode": [
+        {
+          "key": "editBox_classic",
+          "val": "经典模式",
+          "imgPath": "/vrv-static/resources/images/auth/classic.png"
+        },
+        {
+          "key": "editBox_standard",
+          "val": "标准模式",
+          "imgPath": "/vrv-static/resources/images/auth/standard.png"
+        }
+      ]
+    }
+  },
+  "account": {
+    "localSetting": {
+      "send_msg_key": "isSendMsgKey",
+      "msg_remind": "isMsgRemind",
+      "sound_remind": "isSoundRemind",
+      "online_Remind": "isOnlineRemind",
+      "screenshot_key": "isScreenshotKey",
+      "top_apps": "isTopApp",
+      "media_remind": "isMediaRemind",
+      "editBox_mode": "isEditBoxMode",
+      "screen_display": "isScreenDisplay"
+    }
+  },
+  "prtSc": {
+    "osx": "Shift+Command+X",
+    "windows": "Shift+Ctrl+X",
+    "normal": "NORMAL",
+    "hide": "HIDE"
+  },
+  "restUserConfig": ["send_msg_key", "screenshot_key", "screen_display"]
+}

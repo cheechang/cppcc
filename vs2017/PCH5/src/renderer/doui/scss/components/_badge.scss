@@ -1,0 +1,80 @@
+.d-badge-box{
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  .d-badge{
+    display: inline-block;
+    background-color: $--color-danger;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    transform: translate(100%, -50%);
+    border: 1px solid $--color-white;
+    box-shadow: 0 0 0 1px $--color-white;
+    &.d-badge-content{
+      text-align: center;
+      white-space: nowrap;
+      border-radius: $--badge-radius;
+      color: $--color-white;
+      font-size: $--badge-font-size;
+      height: $--badge-size;
+      line-height: $--badge-size;
+      padding: 0 $--badge-padding;
+      right: #{ 1 + $--badge-size / 2};
+    }
+    &.d-badge-dot{
+      right: 5px;
+      width: $--badge-dot-size;
+      height: $--badge-dot-size;
+      padding: 0px;
+      border-radius: $--border-radius-circle;
+    }
+    &.d-badge-primary{
+      background-color: $--color-primary;
+    }
+    &.d-badge-success{
+      background-color: $--color-success;
+    }
+    &.d-badge-normal{
+      background-color: $--color-danger;
+    }
+    &.d-badge-info{
+      background-color: $--color-info;
+    }
+    &.d-badge-danger{
+      background-color: $--color-danger;
+    }
+    &.d-badge-warning{
+      background-color: $--color-warning;
+    }
+    
+  }
+}
+.d-zoom-in-enter-active {
+  animation: d-zoom-in .3s;
+}
+.d-zoom-in-leave-active {
+  animation: d-zoom-out .3s;
+}
+@keyframes d-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes d-zoom-out {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+  <!-- <title>信源豆豆</title> -->
+  <!--<link rel="stylesheet" href="./renderer/iconfont/MaterialIcons.css">-->
+  <!--<link rel="stylesheet" href="./renderer/iconfont/font-awesome.min.css">-->
+  <% if (htmlWebpackPlugin.options.nodeModules) { %>
+    <!-- Add `node_modules/` to global paths so `require` works properly in development -->
+    <script>
+      require('module').globalPaths.push('<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>')
+    </script>
+    <% } %>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- Set `'vrv-static/resources/emoji/` path to static files in production -->
+  <!-- <script>
+    if (process.env.NODE_ENV !== 'development') window.'vrv-static/resources/emoji/ = require('path').join(__dirname, '../static').replace(/\\/g, '\\\\')
+  </script> -->
+
+  <!-- webpack builds are automatically injected -->
+</body>
+
+</html>

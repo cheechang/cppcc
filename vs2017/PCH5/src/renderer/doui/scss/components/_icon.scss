@@ -1,0 +1,24 @@
+.d-icon{
+  cursor: inherit;
+  display: inline-block;
+  font-size: $--icon-size-normal!important;
+  color: inherit;
+}
+.d-icon-click{
+  cursor: pointer!important;
+}
+.d-icon-size-mini{
+  font-size: $--icon-size-mini!important;
+}
+.d-icon-size-small{
+  font-size: $--icon-size-small!important;
+}
+.d-icon-size-medium{
+  font-size: $--icon-size-medium!important;
+}
+.d-icon-size-large{
+  font-size: $--icon-size-large!important;
+}
+.d-icon-size-inherit{
+  font-size: inherit!important;
+}

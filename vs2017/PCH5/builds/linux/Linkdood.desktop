@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=信源豆豆
+Version=1.0
+Exec=/opt/Linkdood/Linkdood.sh
+Comment=信源豆豆
+Icon=/opt/Linkdood/resources/app/node_modules/vrv-static/resources/images/common/dou.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Office;

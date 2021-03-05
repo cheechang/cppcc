@@ -1,0 +1,132 @@
+$--color-primary: #323a7b !important;
+$--color-light: #5760ac !important;
+
+/*透明度效果，左侧导航毛玻璃效果需求*/
+// $--color-transparency-large: #fafafa !important;
+$--color-transparency-large: #ebebeb !important;
+$--color-transparency-small: rgba(144, 144, 144, 0.35);
+
+/*鼠标滑过背景颜色*/
+// $--color-hover: rgba(235, 235, 235, 0.50);
+$--color-hover: #dbdbdb;
+/*鼠标选中背景颜色*/
+// $--color-active: #ebebeb !important;
+$--color-active: #d1d1d1 !important;
+// 子列表鼠标选中背景颜色
+$--color-child-item-active:  rgba(39, 37, 37, 0.15) !important;
+
+// 背景图片
+/* 主题背景图 */
+$--background-img-primary: '~Theme/resource/primary/backgroundImg.webp';
+/* 水印主题背景图 */
+$--background-img-theme-mark-primary: url('~Theme/resource/primary/mark_backgroundImg.webp');
+$--background-img-primary1: '~Theme/resource/purple/backgroundImg.webp';
+
+/* 消息气泡颜色 */
+$--background-msgbuble-primary: $--color-light;
+
+
+/* 主字体色 */
+$--color-text-primary: #4a4a4a !default;
+/* 副字体色 */
+$--color-text-light: #000 !important;
+/* 浅色字体 */
+$--color-text-lighter: #767676 !important;
+/* 极致浅色字体 */
+$--color-text-extra-light: #edf2fc !default;
+/* 可点击文本字体色 */
+$--color-text-hover: #2196F3 !default;
+/* 可点击文本字体色 */
+$--color-text-active: #1565C0 !default;
+
+$--color-white: #fff;
+$--color-black: #000;
+
+//鼠标样式
+$--cusor-pointer: pointer;
+$--cusor-normal: normal;
+
+$--color-success: #4CAF50 !default;
+$--color-warning: #FFC107 !default;
+$--color-danger: #FF5252 !default;
+$--color-info: #2196F3 !default;
+
+
+
+/* 字体图标 */
+$--icon-color-primary: map-get($--color-grey, lighten-1);
+
+/* 消息级别提示 */
+$--color-msg-prompt-low: #006efe; 
+/* 消息正常提示 */
+$--color-msg-prompt-normal: #ff4949; 
+/* 消息中级提示 */
+$--color-msg-prompt-middle: #ffae00;
+/* 消息顶级提示 */
+$--color-msg-prompt-danger: #ec4c25;
+
+$--message-flex-direction: row-reverse;
+
+/* 默认字体大小 */
+$--font-size-primary: 16px;
+/* 最小字体 */
+$--font-size-small: 12px;
+/* 中等字体大小 */
+$--font-size-mid: 14px;
+/* 大字体 */
+$--font-size-big: 18px;
+
+/* 背景图片重复规则 */
+$--background-img-repeat: no-repeat;
+/* 背景图片大小规则 */
+$--background-img-size: 100% 100%;
+/* 主题色为背景的字体色 */
+$--color-text-bg: #fff ;
+/* 可点击文本字体色 */
+$--color-text-hover-primary: get-blue-color(darken-4);
+/* 可点击文本字体色 */
+$--color-text-active-primary: #1565C0 !default;
+/* 边框 */ 
+$--border-width-base: 1px;
+$--border-style-base: solid;
+$--border-color-base: get-grey-color(lighten-2);
+$--border-color-lighten: get-grey-color(lighten-5);
+$--border-color-lighten-grey: get-grey-color(lighten-4);
+$--border-color-grey:map-get($--color-grey, lighten-1);
+$--border-color-grey-lighten: map-get($--color-grey, lighten-3);
+$--border-color-dark: map-get($--color-grey, darken-1);
+$--border-color-blue: #aec8d4;
+$--border-color-blue-darken: #1976D2;
+$--border-color-hover: $--color-primary;
+$--border-radius-base: 3px;
+$--border-radius-none: 0px;
+$--border-radius-small: 2px;
+$--border-radius-large: 15px;
+$--border-radius-msg: 20px;
+$--border-radius-circle: 50%;
+
+
+
+
+
+
+
+/* 默认边框阴影 */
+$--box-shadow-base: 0px 4px 12px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+/* 左右边框阴影 */
+$--box-shadow-lr: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+$--box-shadow-lr-active: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12);
+/* 右下阴影*/
+$--box-shadow-rd: 0px 2px 1px -1px rgba(0, 0, 0, 0.4), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 3px 1px 3px 0px rgba(0, 0, 0, 0.12);
+$--box-shadow-hover: 0px 7px 8px -4px rgba(0,0,0,0.01), 0px 12px 17px 2px rgba(0,0,0,0.14), 0px 5px 22px 4px rgba(0,0,0,0.12);
+$--box-shadow-elevation: 0 0 10px 0 rgba(101, 111, 122, 0.5);
+$--box-shadow-elevation-hover: 0px 7px 8px -4px rgba(0,0,0,0.01), 0px 0px 10px 1px rgba(0,0,0,0.14), 0px 4px 22px 4px rgba(0,0,0,0.12);
+$--box-shadow-navbar: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+
+/* Transition -------------------------- */
+$--all-transition5: all .3s cubic-bezier(.645,.045,.355,1) !default;
+$--fade-transition5: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--fade-linear-transition5: opacity 200ms linear !default;
+$--md-fade-transition5: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms !default;
+$--border-transition-base5: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
+$--color-transition-base5: color .2s cubic-bezier(.645,.045,.355,1) !default;

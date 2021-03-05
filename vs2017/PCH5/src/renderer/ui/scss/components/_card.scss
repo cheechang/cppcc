@@ -1,0 +1,166 @@
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin flexs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexJustify($n) {
+  -moz-justify-content: $n;
+  -webkit-justify-content: $n;
+  justify-content: $n;
+}
+
+@mixin flexAlign($n) {
+  -webkit-box-align: $n;
+  -moz-align-items: $n;
+  -webkit-align-items: $n;
+  align-items: $n;
+}
+
+@mixin flexNum($n) {
+  -webkit-box-flex: $n;
+  -webkit-flex: $n;
+  -ms-flex: $n;
+  flex: $n;
+}
+
+.card {
+  width: 100%;
+  box-shadow: none;
+  background: none;
+  .card-content {
+    &.default-content {
+      height: 3.9rem;
+      padding: 0.5rem;
+    }
+  }
+  .media {
+    width: 100%;
+    display: -webkit-box;
+  }
+  &.card-disabled {
+    pointer-events: none;
+  }
+}
+
+.title:not(.is-spaced)+.subtitle {
+  margin-top: -1.2rem;
+}
+
+// .card-active {
+//   background: #ebebeb;
+// }
+
+// .card:hover {
+//   background: #efefef;
+//   cursor: default;
+// }
+
+.card .media-content {
+  @include flexs;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  position: relative;
+  @include flexAlign(center);
+  @include flexJustify(space-around);
+  @include flexNum(1);
+  overflow: inherit;
+}
+
+.title {
+  width: 100%;
+  @include flexs;
+  @include flexJustify(space-between);
+  @include flexAlign(center);  
+  font-weight: 500;
+  color: #000;
+  font-size: 0.85rem;
+  line-height: normal;
+  white-space: nowrap;
+  .title-main {
+    max-width: 75%;
+    font-weight: 500;
+    @include ellipsis;
+    .card-tip {
+      position: absolute;
+      max-width: 120px;
+      display: none;
+      bottom: 25px;
+      width: 100%;
+    }
+    &:hover .card-tip {
+      display: block;
+      overflow: visible;
+    }
+  }
+}
+
+.subtitle {
+  width: 100%;
+  @include flexs;
+  font-size: 0.75rem;
+  color: #767676;
+  margin-top: -1.5rem;
+  min-height: 0.75rem;
+  max-height: 0.95rem;
+  .contents {
+    width: 78%;
+    @include ellipsis;
+    font-weight: 500;
+  }
+  .mini_content{
+    width: 56%;
+  }
+}
+
+.media-left {
+  @include flexs;
+  @include flexAlign(center);
+  position: relative;
+}
+
+.media-right {
+  @include flexs;
+  min-width: 40px;
+}
+.screen-max-width-914 {
+  @media screen and (max-width: 914px) {
+    .card-content {
+      width: 173px !important;
+    }
+    .subtitle {
+      display: none !important;
+    }
+    .title {
+      margin-bottom: 0px !important;
+    }
+  }
+}
+.screen-max-width-801 {
+  @media screen and (max-width: 801px) {
+    .media-content {
+      display: none !important;
+    }
+    .media-left {
+      margin-right: 0px !important;
+    }
+    .card-content {
+      width: 65px !important;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+﻿<!doctype html>
+<html lang="en>
+<meta charset="uft-8">
+<head>
+    <title>测试QT-JS的交互</title>
+     <script src="qwebchannel.js"></script>
+ 
+</head>
+<body>
+     <script>
+          function  fromCPPInfo(taskid,text)
+          {
+              ///// alert(text);
+              // window.bridge.slot_debug("update age: " + text);
+                 
+	document.getElementById("qttext").value =taskid+"  "+ text;
+	alert(taskid+"  "+text);
+          }
+
+          window.onload = function () {
+             if (navigator.userAgent.indexOf('Toon-pc') !== -1) {
+                new QWebChannel(window.qt.webChannelTransport, function (channel) {
+                    window.bridge = channel.objects.cppObject    // 创建连接 QT 的接口
+	   window.bridge.sendToWeb.connect( fromCPPInfo)
+                 })
+            }
+        }
+
+        function fromWebToCpp() {
+             var tt = document.getElementById("groupid").value;
+               if (typeof window.bridge!="undefined")
+              {   
+                      bridge.sendTextToCpp(tt);  // 通知 QT 
+               }
+        }
+        function callQT_getAppList() {
+             var tt = document.getElementById("groupid").value;
+              ///  alert("Start")	
+               if (typeof window.bridge!="undefined")
+              {   
+	    ///alert("Start")	
+                     bridge.callQTProcess("555555getAppList","getAppList");  // 通知 QT 
+	    ///alert("End")
+               }
+        }
+
+        function callQT_getUserInfo() {
+                ///  alert("Start")	
+               if (typeof window.bridge!="undefined")
+              {   
+	    ///alert("Start")	
+                     bridge.callQTProcess("9999999getUserInfo","getUserInfo");  // 通知 QT 
+	    ///alert("End")
+               }
+        }
+       function callQT_loginOut(){
+               if (typeof window.bridge!="undefined")
+              {   
+	    ///alert("Start")	
+                     bridge.callQTProcess("9999999loginOut","loginOut");  // 通知 QT 
+	    ///alert("End")
+               }
+      }
+//申请
+        function callQT_qAppInfo() {
+              var tt = document.getElementById("appid").value;
+              if (typeof window.bridge!="undefined")
+              {   
+	    ///alert("Start")	
+                     bridge.callQTProcess("getAppInfo8888888","getAppInfo:"+tt);  // 通知 QT 
+	    ///alert("End")
+               }
+        }
+//查询
+        function callQT_gAppInfo() {
+               if (typeof window.bridge!="undefined")
+              {   
+	    ///alert("Start")	
+                     bridge.callQTProcess("getAppInfo77777777","getAppInfo");  // 通知 QT 
+	    ///alert("End")
+               }
+        }
+//显示用户信息 
+      function dispUserInfo(){
+               var tt = document.getElementById("userid").value;
+                if (typeof window.bridge!="undefined")
+               {   
+	   bridge.callQTProcess("dispUserInfo6666666","dispUser:"+tt);  // 通知 QT 
+                   /////   bridge.sendTextToCpp(tt);  // 通知 QT 
+               }
+    }
+ 
+
+    </script>
+
+    <form >
+        <p>群聊ID : <input type="text" id="groupid"  value ="21265121852" ></p>
+          <input id="add" type="button" value="去群聊" class="button" onclick="fromWebToCpp()" />
+     <br>    <br>
+        <p>USER ID : <input type="text" id="userid"  value ="21256850859" ></p>
+          <input id="add" type="button" value="显示用户信息" class="button" onclick="dispUserInfo()" />
+     <br>    <br>
+    <br>
+           <input id="add" type="button" value="QT 接口(获取应用APPID列表）" class="button" onclick=" callQT_getAppList()" />
+    <br>    <br>
+           <input id="add" type="button" value="QT 接口(获取用户信息）" class="button" onclick=" callQT_getUserInfo()" />
+       <br><br><br>
+       <input id="add" type="button" value="重新登陆" class="button" onclick=" callQT_loginOut()" />
+
+       <p>应用APPID : <input type="text" id="appid"  value ="21256822674" ></p>
+  
+       <input id="add" type="button" value="QT 接口(申请应用APPINFO）" class="button" onclick=" callQT_qAppInfo()" />
+       <input id="add" type="button" value="QT 接口(获取应用APPINFO）" class="button" onclick=" callQT_gAppInfo()" />
+
+     </form> 
+<div>
+       <span> 从QT Process接收到的信息:</span>
+       <p> <input type="text" id="qttext"  style="height:200px;font-size:14px;width:200px; height:20px;"></p>
+    
+   </div>
+
+<div>
+<a  href="http://114.255.32.34/cppcc-management/api/show/file?id=2c90823b6924117f01692774f30a0073&Authorization=Bearer%208c7ddfed-0a0b-4af6-8a9c-4201069086c6">视频</a>
+ 
+</div>
+
+<div>
+<video src="http://114.255.32.34/cppcc-management/api/show/file?id=2c90823b6924117f01692774f30a0073&Authorization=Bearer%208c7ddfed-0a0b-4af6-8a9c-4201069086c6"  controls="controls"  type="video/mp4" width="500" height="300">
+
+</div>
+
+ <div>
+<EMBED style=" margin: 5px auto; width:900px; height: 400px";   
+src="http://player.youku.com/player.php/sid/XNDU4MjM3Mjg=/v.swf"   
+quality= "high"   
+wmode="transparent"  
+pluginspage="http://www.macromedia.com/go/getflashplayer"  
+type="application/x-shockwave-flash">  
+</div>
+    <span> </span> <span> </span>  
+ <div>
+ 
+<EMBED style=" margin: 5px auto; width:900px; height: 400px";   
+src="video\shipin.swf"   
+quality= "high"   
+wmode="transparent"  
+pluginspage="Flash\FlashUtil10p_Plugin.exe"  
+type="application/x-shockwave-flash">  
+
+ </div>
+</body>
+</html>
+ 

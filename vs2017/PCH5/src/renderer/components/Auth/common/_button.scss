@@ -1,0 +1,57 @@
+.button {
+  &.label-before {
+    padding-right: 8px;
+    icon {
+      margin-right: 4px;
+      margin-left: 0;
+    }
+    .button-label {
+      padding-right: 8px;
+    }
+  }
+  &.v-button-text {
+    border: none;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.v-button-disable {
+    color: rgba(0,0,0,0.26) !important;
+    background: rgba(0,0,0,0.12) !important;
+    box-shadow: none !important;
+    &:active{
+      box-shadow: none !important;
+    }
+  }
+}
+.v-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0;
+  flex: 0 0 auto;
+  min-width: 88px;
+  outline: none;
+  color: $--color-white;
+  font-size: $--font-size-mid;
+  background: $--color-info;
+  border-radius: $--border-radius-base;
+  &:hover{
+    color: $--color-white;
+  }
+  &:active{
+    box-shadow: $--box-shadow-rd
+  }
+}
+
+.v-button--small{
+  font-size: $--font-size-mid;
+  height: 28px;
+  padding: 0 8px;
+}
+.v-button--max_width{
+  width: 100%;
+}
+.v-button--cancle{
+  background: get-grey-color(darken-1);
+}

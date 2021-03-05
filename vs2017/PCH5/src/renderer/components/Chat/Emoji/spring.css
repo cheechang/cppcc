@@ -1,0 +1,1521 @@
+[class*="sprite-"] {
+  width: 25px;
+  height: 25px;
+  background: url('~vrv-static/resources/images/emoji/text_emoji/emoji.png');
+  background-repeat: no-repeat;
+  /* vertical-align: top; */
+  display: inline-block;
+  margin: 5px;
+}
+/* ------------默认表情--------------- */
+.sprite-smog {
+  background-position: -4px -4px;
+}
+.sprite-sluggish {
+  background-position: -34px -4px;
+}
+.sprite-blind {
+  background-position: -64px -4px;
+}
+.sprite-jingkong {
+  background-position: -94px -4px;
+}
+.sprite-waterfall_sweat {
+  background-position: -124px -4px;
+}
+.sprite-cry {
+  background-position: -154px -4px;
+}
+.sprite-sleep {
+  background-position: -184px -4px;
+}
+.sprite-intimidation {
+  background-position: -214px -4px;
+}
+.sprite-kuanghan {
+  background-position: -244px -4px;
+}
+.sprite-uncomfortable {
+  background-position: -274px -4px;
+}
+.sprite-sad {
+  background-position: -304px -4px;
+}
+.sprite-fennu {
+  background-position: -334px -4px;
+}
+.sprite-angry {
+  background-position: -364px -4px;
+}
+.sprite-oops {
+  background-position: -394px -4px;
+}
+.sprite-spit_tongue {
+  background-position: -4px -34px;
+}
+.sprite-naughty {
+  background-position: -34px -34px;
+}
+.sprite-kiss {
+  background-position: -64px -34px;
+}
+.sprite-air_kiss {
+  background-position: -94px -34px;
+}
+.sprite-crazy {
+  background-position: -124px -34px;
+}
+.sprite-blue {
+  background-position: -154px -34px;
+}
+.sprite-sweat {
+  background-position: -184px -34px;
+}
+.sprite-buxie {
+  background-position: -214px -34px;
+}
+.sprite-heng {
+  background-position: -244px -34px;
+}
+.sprite-color {
+  background-position: -274px -34px;
+}
+.sprite-youxian {
+  background-position: -304px -34px;
+}
+.sprite-lovely {
+  background-position: -334px -34px;
+}
+.sprite-winks {
+  background-position: -364px -34px;
+}
+.sprite-happy {
+  background-position: -394px -34px;
+}
+.sprite-smile {
+  background-position: -4px -34px;
+}
+.sprite-dumbfounding {
+  background-position: -34px -64px;
+}
+.sprite-bared_teeth {
+  background-position: -64px -64px;
+}
+.sprite-shy {
+  background-position: -94px -64px;
+}
+.sprite-baifo {
+  background-position: -124px -64px;
+}
+.sprite-Hands {
+  background-position: -154px -64px;
+}
+.sprite-come_on {
+  background-position: -184px -64px;
+}
+.sprite-tuizhang {
+  background-position: -214px -64px;
+}
+.sprite-applaud {
+  background-position: -244px -64px;
+}
+.sprite-despise {
+  background-position: -274px -64px;
+}
+.sprite-Amazing {
+  background-position: -304px -64px;
+}
+.sprite-haode {
+  background-position: -334px -64px;
+}
+.sprite-palm {
+  background-position: -364px -64px;
+}
+.sprite-fist {
+  background-position: -394px -64px;
+}
+.sprite-Pointing_right {
+  background-position: -4px -94px;
+}
+.sprite-Pointing_left {
+  background-position: -34px -94px;
+}
+
+.sprite-Pointing_down {
+  background-position: -64px -94px;
+}
+
+.sprite-Pointing_up {
+  background-position: -94px -94px;
+}
+.sprite-yeah {
+  background-position: -124px -94px;
+}
+.sprite-Oath {
+  background-position: -154px -94px;
+}
+.sprite-xuanshi {
+  background-position: -184px -94px;
+}
+.sprite-no {
+  background-position: -214px -94px;
+}
+.sprite-dianhua {
+  background-position: -244px -94px;
+}
+.sprite-jinghao {
+  background-position: -274px -94px;
+}
+.sprite-ling {
+  background-position: -304px -94px;
+}
+.sprite-yi {
+  background-position: -334px -94px;
+}
+.sprite-er {
+  background-position: -364px -94px;
+}
+.sprite-san {
+  background-position: -394px -94px;
+}
+.sprite-si {
+  background-position: -4px -124px;
+}
+.sprite-wu {
+  background-position: -34px -124px;
+}
+.sprite-liu {
+  background-position: -64px -124px;
+}
+.sprite-qi {
+  background-position: -94px -124px;
+}
+.sprite-ba {
+  background-position: -124px -124px;
+}
+.sprite-jiu {
+  background-position: -154px -124px;
+}
+.sprite-copy {
+  background-position: -184px -124px;
+}
+.sprite-right {
+  background-position: -214px -124px;
+}
+.sprite-TM {
+  background-position: -244px -124px;
+}
+.sprite-xiangzuoshang {
+  background-position: -274px -124px;
+}
+.sprite-xiangyoushang {
+  background-position: -304px -124px;
+}
+.sprite-xiangyuoxia {
+  background-position: -334px -124px;
+}
+.sprite-xiangzuoxia {
+  background-position: -364px -124px;
+}
+.sprite-kuaijin {
+  background-position: -394px -124px;
+}
+.sprite-kuaitui {
+  background-position: -4px -154px;
+}
+.sprite-xiayige {
+  background-position: -34px -154px;
+}
+.sprite-shangyige {
+  background-position: -64px -154px;
+}
+.sprite-taiyang {
+  background-position: -94px -154px;
+}
+.sprite-yunduo {
+  background-position: -124px -154px;
+}
+.sprite-xiayu {
+  background-position: -154px -154px;
+}
+.sprite-kafei {
+  background-position: -184px -154px;
+}
+.sprite-baiyangzuo {
+  background-position: -214px -154px;
+}
+.sprite-jinniuzuo {
+  background-position: -244px -154px;
+}
+.sprite-shaugnzizuo {
+  background-position: -274px -154px;
+}
+.sprite-juxiezuo {
+  background-position: -304px -154px;
+}
+.sprite-shizizuo {
+  background-position: -334px -154px;
+}
+.sprite-chunvzuo {
+  background-position: -364px -154px;
+}
+.sprite-tianchenzuo {
+  background-position: -394px -154px;
+}
+.sprite-tianxiezuo {
+  background-position: -4px -184px;
+}
+.sprite-sheshouzuo {
+  background-position: -34px -184px;
+}
+.sprite-moxiezuo {
+  background-position: -64px -184px;
+}
+.sprite-shuipingzuo {
+  background-position: -94px -184px;
+}
+.sprite-shaungyuzuo {
+  background-position: -124px -184px;
+}
+.sprite-heitao {
+  background-position: -154px -184px;
+}
+.sprite-meihua {
+  background-position: -184px -184px;
+}
+.sprite-hongtao {
+  background-position: -214px -184px;
+}
+.sprite-fangkuai {
+  background-position: -244px -184px;
+}
+.sprite-sangna {
+  background-position: -274px -184px;
+}
+.sprite-canjiren {
+  background-position: -304px -184px;
+}
+.sprite-jinggao {
+  background-position: -334px -184px;
+}
+.sprite-shandian {
+  background-position: -364px -184px;
+}
+.sprite-zuqiu {
+  background-position: -394px -184px;
+}
+.sprite-bangqiu {
+  background-position: -4px -214px;
+}
+.sprite-xueren {
+  background-position: -34px -214px;
+}
+.sprite-jiaotang {
+  background-position: -64px -214px;
+}
+.sprite-penquan {
+  background-position: -94px -214px;
+}
+.sprite-gaoerfu {
+  background-position: -124px -214px;
+}
+.sprite-fanchuan {
+  background-position: -154px -214px;
+}
+.sprite-yeying {
+  background-position: -184px -214px;
+}
+.sprite-jiayouzhan {
+  background-position: -214px -214px;
+}
+.sprite-jiandao {
+  background-position: -244px -214px;
+}
+.sprite-feiji {
+  background-position: -274px -214px;
+}
+.sprite-xingxingshanshuo {
+  background-position: -304px -214px;
+}
+.sprite-xinghao {
+  background-position: -334px -214px;
+}
+.sprite-juzixing {
+  background-position: -364px -214px;
+}
+.sprite-bacha {
+  background-position: -394px -214px;
+}
+.sprite-wenhao {
+  background-position: -4px -244px;
+}
+.sprite-gantanhao {
+  background-position: -34px -244px;
+}
+.sprite-hongxin {
+  background-position: -64px -244px;
+}
+.sprite-xiangyou {
+  background-position: -94px -244px;
+}
+.sprite-luying {
+  background-position: -124px -244px;
+}
+.sprite-xiangzuo {
+  background-position: -154px -244px;
+}
+.sprite-xiangshang {
+  background-position: -184px -244px;
+}
+.sprite-xiangxia {
+  background-position: -214px -244px;
+}
+.sprite-tingzhi {
+  background-position: -244px -244px;
+}
+.sprite-gushi {
+  background-position: -274px -244px;
+}
+.sprite-zhufu1 {
+  background-position: -304px -244px;
+}
+.sprite-mimi {
+  background-position: -334px -244px;
+}
+.sprite-hongzhong {
+  background-position: -364px -244px;
+}
+.sprite-hongA {
+  background-position: -394px -244px;
+}
+.sprite-hongB {
+  background-position: -4px -274px;
+}
+.sprite-hongO {
+  background-position: -34px -274px;
+}
+.sprite-tingche {
+  background-position: -64px -274px;
+}
+.sprite-defAB {
+  background-position: -94px -274px;
+}
+.sprite-COOL {
+  background-position: -124px -274px;
+}
+.sprite-defID {
+  background-position: -154px -274px;
+}
+.sprite-defNew {
+  background-position: -184px -274px;
+}
+.sprite-defOK {
+  background-position: -214px -274px;
+}
+.sprite-defUP {
+  background-position: -244px -274px;
+}
+.sprite-defVS {
+  background-position: -274px -274px;
+}
+.sprite-defhere {
+  background-position: -304px -274px;
+}
+.sprite-defcao {
+  background-position: -334px -274px;
+}
+.sprite-defwu {
+  background-position: -364px -274px;
+}
+.sprite-defzhi {
+  background-position: -394px -274px;
+}
+.sprite-defkong {
+  background-position: -4px -304px;
+}
+.sprite-defman {
+  background-position: -34px -304px;
+}
+.sprite-defyou {
+  background-position: -64px -304px;
+}
+.sprite-defyue {
+  background-position: -94px -304px;
+}
+.sprite-defsheng {
+  background-position: -124px -304px;
+}
+.sprite-defge {
+  background-position: -154px -304px;
+}
+.sprite-defgong {
+  background-position: -184px -304px;
+}
+.sprite-defde {
+  background-position: -214px -304px;
+}
+.sprite-xuanwo {
+  background-position: -244px -304px;
+}
+.sprite-yusan {
+  background-position: -274px -304px;
+}
+.sprite-nanxie {
+}
+.sprite-liuxing {
+  background-position: -304px -304px;
+}
+.sprite-riluo {
+  background-position: -334px -304px;
+}
+.sprite-richu {
+  background-position: -364px -304px;
+}
+.sprite-huanghun {
+  background-position: -394px -304px;
+}
+.sprite-zhaoyang {
+  background-position: -4px -334px;
+}
+.sprite-caihong {
+  background-position: -34px -334px;
+}
+.sprite-dalangtaotian {
+  background-position: -64px -334px;
+}
+.sprite-defyueliang {
+  background-position: -94px -334px;
+}
+.sprite-wujiaxing {
+  background-position: -124px -334px;
+}
+.sprite-yeshu {
+  background-position: -154px -334px;
+}
+.sprite-xianrenzhang {
+  background-position: -184px -334px;
+}
+.sprite-yujingxiang {
+  background-position: -214px -334px;
+}
+.sprite-hongmeigui {
+  background-position: -244px -334px;
+}
+.sprite-haitang {
+  background-position: -274px -334px;
+}
+.sprite-xiangrukui {
+  background-position: -304px -334px;
+}
+.sprite-puwei {
+  background-position: -334px -334px;
+}
+.sprite-siyecao {
+  background-position: -364px -334px;
+}
+.sprite-fengye {
+  background-position: -394px -334px;
+}
+.sprite-luoye {
+  background-position: -4px -364px;
+}
+.sprite-lvye {
+  background-position: -34px -364px;
+}
+.sprite-fanqie {
+  background-position: -64px -364px;
+}
+.sprite-qiezi {
+  background-position: -94px -364px;
+}
+.sprite-xigua {
+  background-position: -124px -364px;
+}
+.sprite-chengzi {
+  background-position: -154px -364px;
+}
+.sprite-pingguo {
+  background-position: -184px -364px;
+}
+.sprite-caomei {
+  background-position: -214px -364px;
+}
+.sprite-hanbao {
+  background-position: -244px -364px;
+}
+.sprite-fantuan {
+  background-position: -274px -364px;
+}
+.sprite-mifantuan {
+  background-position: -304px -364px;
+}
+.sprite-mifan {
+  background-position: -334px -364px;
+}
+.sprite-gaijiaofan {
+  background-position: -364px -364px;
+}
+.sprite-miantiao {
+  background-position: -394px -364px;
+}
+.sprite-yidalimian {
+  background-position: -4px -394px;
+}
+.sprite-mianbao {
+  background-position: -34px -394px;
+}
+.sprite-shutiao {
+  background-position: -64px -394px;
+}
+.sprite-chuanchuanxiang {
+  background-position: -94px -394px;
+}
+.sprite-guandongzhu {
+  background-position: -124px -394px;
+}
+.sprite-shousi {
+  background-position: -154px -394px;
+}
+.sprite-shengdai {
+  background-position: -184px -394px;
+}
+.sprite-shabing {
+  background-position: -214px -394px;
+}
+.sprite-dangao {
+  background-position: -244px -394px;
+}
+.sprite-kuaican {
+  background-position: -274px -394px;
+}
+.sprite-lamian {
+  background-position: -304px -394px;
+}
+.sprite-hebaodan {
+  background-position: -334px -394px;
+}
+.sprite-canju {
+  background-position: -364px -394px;
+}
+.sprite-chashui {
+  background-position: -394px -394px;
+}
+.sprite-baijiu {
+  background-position: -4px -424px;
+}
+.sprite-jiweijiu {
+  background-position: -34px -424px;
+}
+.sprite-pijiu {
+  background-position: -64px -424px;
+}
+.sprite-ganbei {
+  background-position: -94px -424px;
+}
+.sprite-hudiejie {
+  background-position: -124px -424px;
+}
+.sprite-liwu {
+  background-position: -154px -424px;
+}
+.sprite-shengrikuaile {
+  background-position: -184px -424px;
+}
+.sprite-wanshengjie {
+  background-position: -214px -424px;
+}
+.sprite-shendanshu {
+  background-position: -244px -424px;
+}
+.sprite-shendanlaoren {
+  background-position: -274px -424px;
+}
+.sprite-yanhua {
+  background-position: -304px -424px;
+}
+.sprite-yanhuo {
+  background-position: -334px -424px;
+}
+.sprite-qiqiu {
+  background-position: -364px -424px;
+}
+.sprite-qingzhu {
+  background-position: -394px -424px;
+}
+.sprite-ribenqi {
+  background-position: -4px -454px;
+}
+.sprite-xianrenqiu {
+  background-position: -34px -454px;
+}
+.sprite-hanguoren {
+  background-position: -64px -454px;
+}
+.sprite-jinyu {
+  background-position: -94px -454px;
+}
+.sprite-liuyan {
+  background-position: -124px -454px;
+}
+.sprite-zhaopian {
+  background-position: -154px -454px;
+}
+.sprite-beibao {
+  background-position: -184px -454px;
+}
+.sprite-motianlun {
+  background-position: -214px -454px;
+}
+.sprite-guoshangche {
+  background-position: -244px -454px;
+}
+.sprite-kalaOK {
+  background-position: -274px -454px;
+}
+.sprite-shexiangji {
+  background-position: -304px -454px;
+}
+.sprite-luxiang {
+  background-position: -334px -454px;
+}
+.sprite-tingyingyue {
+  background-position: -364px -454px;
+}
+.sprite-caisepan {
+  background-position: -394px -454px;
+}
+.sprite-maozi {
+  background-position: -4px -484px;
+}
+.sprite-chepiao {
+  background-position: -34px -484px;
+}
+.sprite-paidianying {
+  background-position: -64px -484px;
+}
+.sprite-zhongba {
+  background-position: -94px -484px;
+}
+.sprite-def777 {
+  background-position: -124px -484px;
+}
+.sprite-taiqiu {
+  background-position: -154px -484px;
+}
+.sprite-yingfu {
+  background-position: -184px -484px;
+}
+.sprite-sakasi {
+  background-position: -214px -484px;
+}
+.sprite-jita {
+  background-position: -244px -484px;
+}
+.sprite-yinyue {
+  background-position: -274px -484px;
+}
+.sprite-xiaohao {
+  background-position: -304px -484px;
+}
+.sprite-wangqiu {
+  background-position: -334px -484px;
+}
+.sprite-huaxue {
+  background-position: -364px -484px;
+}
+.sprite-lanqiu {
+  background-position: -394px -484px;
+}
+.sprite-saicheqi {
+  background-position: -4px -514px;
+}
+.sprite-paobu {
+  background-position: -34px -514px;
+}
+.sprite-chonglang {
+  background-position: -64px -514px;
+}
+.sprite-guanjun {
+  background-position: -94px -514px;
+}
+.sprite-ganlanqiu {
+  background-position: -124px -514px;
+}
+.sprite-youyong {
+  background-position: -154px -514px;
+}
+.sprite-fangzi {
+  background-position: -184px -514px;
+}
+.sprite-dasha {
+  background-position: -214px -514px;
+}
+.sprite-lvguan {
+  background-position: -244px -514px;
+}
+.sprite-yiyuan {
+  background-position: -274px -514px;
+}
+.sprite-yinghang {
+  background-position: -304px -514px;
+}
+.sprite-ATM {
+  background-position: -334px -514px;
+}
+.sprite-lvdian {
+  background-position: -364px -514px;
+}
+.sprite-jiudian {
+  background-position: -394px -514px;
+}
+.sprite-24xiaoshi {
+  background-position: -4px -544px;
+}
+.sprite-zhonglou {
+  background-position: -34px -544px;
+}
+.sprite-bangonglou {
+  background-position: -64px -544px;
+}
+.sprite-gongchang {
+  background-position: -94px -544px;
+}
+.sprite-siyuan {
+  background-position: -124px -544px;
+}
+.sprite-chengbao {
+  background-position: -154px -544px;
+}
+.sprite-defshe {
+  background-position: -184px -544px;
+}
+.sprite-junma {
+  background-position: -214px -544px;
+}
+.sprite-mianyang {
+  background-position: -244px -544px;
+}
+.sprite-houzi {
+  background-position: -274px -544px;
+}
+.sprite-defji {
+  background-position: -304px -544px;
+}
+.sprite-yezhu {
+  background-position: -334px -544px;
+}
+.sprite-daxiang {
+  background-position: -364px -544px;
+}
+.sprite-zhangyu {
+  background-position: -394px -544px;
+}
+.sprite-beike {
+  background-position: -4px -574px;
+}
+.sprite-maomaochong {
+  background-position: -34px -574px;
+}
+.sprite-defyu {
+  background-position: -64px -574px;
+}
+.sprite-redaiyu {
+  background-position: -94px -574px;
+}
+.sprite-xiaoji {
+  background-position: -124px -574px;
+}
+.sprite-gezi {
+  background-position: -154px -574px;
+}
+.sprite-q_ie {
+  background-position: -184px -574px;
+}
+.sprite-kaola {
+  background-position: -214px -574px;
+}
+.sprite-luotuo {
+  background-position: -244px -574px;
+}
+.sprite-haitun {
+  background-position: -274px -574px;
+}
+.sprite-laoshu {
+  background-position: -304px -574px;
+}
+.sprite-niunai {
+  background-position: -334px -574px;
+}
+.sprite-laohu {
+  background-position: -364px -574px;
+}
+.sprite-tuzi {
+  background-position: -394px -574px;
+}
+.sprite-huangshulang {
+  background-position: -4px -604px;
+}
+.sprite-jingyu {
+  background-position: -34px -604px;
+}
+.sprite-defma {
+  background-position: -64px -604px;
+}
+.sprite-houtou {
+  background-position: -94px -604px;
+}
+.sprite-xiaogou {
+  background-position: -124px -604px;
+}
+.sprite-zhutou {
+  background-position: -154px -604px;
+}
+.sprite-qingwa {
+  background-position: -184px -604px;
+}
+.sprite-shuashu {
+  background-position: -214px -604px;
+}
+.sprite-wangcai {
+  background-position: -244px -604px;
+}
+.sprite-zongxiong {
+  background-position: -274px -604px;
+}
+.sprite-eye {
+  background-position: -304px -604px;
+}
+.sprite-ear {
+  background-position: -334px -604px;
+}
+.sprite-nose {
+  background-position: -364px -604px;
+}
+.sprite-mouth {
+  background-position: -394px -604px;
+}
+.sprite-huangguan {
+  background-position: -4px -634px;
+}
+.sprite-caomao {
+  background-position: -34px -634px;
+}
+.sprite-zhengzhuang {
+  background-position: -64px -634px;
+}
+.sprite-duanxiu {
+  background-position: -94px -634px;
+}
+.sprite-qunzi {
+  background-position: -124px -634px;
+}
+.sprite-hefu {
+  background-position: -154px -634px;
+}
+.sprite-bijini {
+  background-position: -184px -634px;
+}
+.sprite-shoudibao {
+  background-position: -214px -634px;
+}
+.sprite-pixie {
+  background-position: -244px -634px;
+}
+.sprite-gaogengxie {
+  background-position: -274px -634px;
+}
+.sprite-liangxie {
+  background-position: -304px -634px;
+}
+.sprite-nvxue {
+  background-position: -334px -634px;
+}
+.sprite-jiaoying {
+  background-position: -364px -634px;
+}
+.sprite-nanhai {
+  background-position: -394px -634px;
+}
+.sprite-nvhai {
+  background-position: -4px -664px;
+}
+.sprite-dashu {
+  background-position: -34px -664px;
+}
+.sprite-a_yi {
+  background-position: -64px -664px;
+}
+.sprite-fuqi {
+  background-position: -94px -664px;
+}
+.sprite-gongfuyuan {
+  background-position: -124px -664px;
+}
+.sprite-tunvlang {
+  background-position: -154px -664px;
+}
+.sprite-wangzi {
+  background-position: -184px -664px;
+}
+.sprite-xiaoer {
+  background-position: -214px -664px;
+}
+.sprite-yingduren {
+  background-position: -244px -664px;
+}
+.sprite-yeye {
+  background-position: -274px -664px;
+}
+.sprite-nainai {
+  background-position: -304px -664px;
+}
+.sprite-youer {
+  background-position: -334px -664px;
+}
+.sprite-gongren {
+  background-position: -364px -664px;
+}
+.sprite-gongzhu {
+  background-position: -394px -664px;
+}
+.sprite-youling {
+  background-position: -4px -694px;
+}
+.sprite-tianshi {
+  background-position: -34px -694px;
+}
+.sprite-waixinren {
+  background-position: -64px -694px;
+}
+.sprite-guaiwu {
+  background-position: -94px -694px;
+}
+.sprite-mogui {
+  background-position: -124px -694px;
+}
+.sprite-kuloutou {
+  background-position: -154px -694px;
+}
+.sprite-shuibian {
+  background-position: -184px -694px;
+}
+.sprite-shibing {
+  background-position: -214px -694px;
+}
+.sprite-tiaowu {
+  background-position: -244px -694px;
+}
+.sprite-kouhong {
+  background-position: -274px -694px;
+}
+.sprite-meijia {
+  background-position: -304px -694px;
+}
+.sprite-an_mo {
+  background-position: -334px -694px;
+}
+.sprite-meifa {
+  background-position: -364px -694px;
+}
+.sprite-zhaopei {
+  background-position: -394px -694px;
+}
+.sprite-chouxie {
+  background-position: -4px -724px;
+}
+.sprite-yaobunengting {
+  background-position: -34px -724px;
+}
+.sprite-lieyanhongchun {
+  background-position: -64px -724px;
+}
+.sprite-zuanjie {
+  background-position: -94px -724px;
+}
+.sprite-zuanshi {
+  background-position: -124px -724px;
+}
+.sprite-lianai {
+  background-position: -154px -724px;
+}
+.sprite-meiguihua {
+  background-position: -184px -724px;
+}
+.sprite-aiqing {
+  background-position: -214px -724px;
+}
+.sprite-hunli {
+  background-position: -244px -724px;
+}
+.sprite-fenxin {
+  background-position: -274px -724px;
+}
+.sprite-xinsuile {
+  background-position: -304px -724px;
+}
+.sprite-langman {
+  background-position: -334px -724px;
+}
+.sprite-yijianchuanxin {
+  background-position: -364px -724px;
+}
+.sprite-lanxin {
+  background-position: -394px -724px;
+}
+.sprite-lvxin {
+  background-position: -4px -754px;
+}
+.sprite-huangxin {
+  background-position: -34px -754px;
+}
+.sprite-zixin {
+  background-position: -64px -754px;
+}
+.sprite-xinyousuoshu {
+  background-position: -94px -754px;
+}
+.sprite-aixin {
+  background-position: -124px -754px;
+}
+.sprite-dengpao {
+  background-position: -154px -754px;
+}
+.sprite-shengqi {
+  background-position: -184px -754px;
+}
+.sprite-zhadan {
+  background-position: -214px -754px;
+}
+.sprite-huhudashui {
+  background-position: -244px -754px;
+}
+.sprite-yushui {
+  background-position: -274px -754px;
+}
+.sprite-chuiqi {
+  background-position: -304px -754px;
+}
+.sprite-feixiang {
+  background-position: -334px -754px;
+}
+.sprite-jinqian {
+  background-position: -364px -754px;
+}
+.sprite-huilv {
+  background-position: -394px -754px;
+}
+.sprite-GDP {
+  background-position: -4px -784px;
+}
+.sprite-yi_zi {
+  background-position: -34px -784px;
+}
+.sprite-diannao {
+  background-position: -64px -784px;
+}
+.sprite-gongwenbao {
+  background-position: -94px -784px;
+}
+.sprite-guanqu {
+  background-position: -124px -784px;
+}
+.sprite-C_D {
+  background-position: -154px -784px;
+}
+.sprite-dvd {
+  background-position: -184px -784px;
+}
+.sprite-shuben {
+  background-position: -214px -784px;
+}
+.sprite-xiexin {
+  background-position: -244px -784px;
+}
+.sprite-chuanzhen {
+  background-position: -274px -784px;
+}
+.sprite-leida {
+  background-position: -304px -784px;
+}
+.sprite-tongzhi {
+  background-position: -334px -784px;
+}
+.sprite-yanggshengqi {
+  background-position: -364px -784px;
+}
+.sprite-laixin1 {
+  background-position: -394px -784px;
+}
+.sprite-xinxiang {
+  background-position: -4px -814px;
+}
+.sprite-jixin {
+  background-position: -34px -814px;
+}
+.sprite-iphone {
+  background-position: -64px -814px;
+}
+.sprite-laidian {
+  background-position: -94px -814px;
+}
+.sprite-zhengdong {
+  background-position: -124px -814px;
+}
+.sprite-guanji {
+  background-position: -154px -814px;
+}
+.sprite-xinhao {
+  background-position: -184px -814px;
+}
+.sprite-zhaoxiangji {
+  background-position: -214px -814px;
+}
+.sprite-dianshiji {
+  background-position: -244px -814px;
+}
+.sprite-shouyinji {
+  background-position: -274px -814px;
+}
+.sprite-lvxiangdai {
+  background-position: -304px -814px;
+}
+.sprite-laba {
+  background-position: -334px -814px;
+}
+.sprite-fangdajin {
+  background-position: -364px -814px;
+}
+.sprite-yaoshi {
+  background-position: -394px -814px;
+}
+.sprite-jiaosuo {
+  background-position: -4px -844px;
+}
+.sprite-kaisuo {
+  background-position: -34px -844px;
+}
+.sprite-lingdang {
+  background-position: -64px -844px;
+}
+.sprite-deftop {
+  background-position: -94px -844px;
+}
+.sprite-jinzhi18 {
+  background-position: -124px -844px;
+}
+.sprite-defhuo {
+  background-position: -154px -844px;
+}
+.sprite-sujing {
+  background-position: -184px -844px;
+}
+.sprite-shouqiang {
+  background-position: -214px -844px;
+}
+.sprite-liumangxin {
+  background-position: -244px -844px;
+}
+.sprite-biaozhi {
+  background-position: -274px -844px;
+}
+.sprite-snachaji {
+  background-position: -304px -844px;
+}
+.sprite-hongqiu {
+  background-position: -334px -844px;
+}
+.sprite-yidian {
+  background-position: -364px -844px;
+}
+.sprite-liangdian {
+  background-position: -394px -844px;
+}
+.sprite-sandian {
+  background-position: -4px -874px;
+}
+.sprite-sidian {
+  background-position: -34px -874px;
+}
+.sprite-wudian {
+  background-position: -64px -874px;
+}
+.sprite-liudian {
+  background-position: -94px -874px;
+}
+.sprite-qidian {
+  background-position: -124px -874px;
+}
+.sprite-badian {
+  background-position: -154px -874px;
+}
+.sprite-jiudian {
+  background-position: -184px -874px;
+}
+.sprite-shidian {
+  background-position: -214px -874px;
+}
+.sprite-shiyidian {
+  background-position: -244px -874px;
+}
+.sprite-shierdian {
+  background-position: -274px -874px;
+}
+.sprite-fushishan {
+  background-position: -304px -874px;
+}
+.sprite-tieta {
+  background-position: -334px -874px;
+}
+.sprite-ziyounvshengxiang {
+  background-position: -364px -874px;
+}
+.sprite-fandui {
+  background-position: -394px -874px;
+}
+.sprite-zhichi {
+  background-position: -4px -904px;
+}
+.sprite-yonggong {
+  background-position: -34px -904px;
+}
+.sprite-feichuan {
+  background-position: -64px -904px;
+}
+.sprite-dianche {
+  background-position: -94px -904px;
+}
+.sprite-dongche {
+  background-position: -124px -904px;
+}
+.sprite-huochetou {
+  background-position: -154px -904px;
+}
+.sprite-huoche {
+  background-position: -184px -904px;
+}
+.sprite-huochelaile {
+  background-position: -214px -904px;
+}
+.sprite-gongjiao {
+  background-position: -244px -904px;
+}
+.sprite-fubiao {
+  background-position: -274px -904px;
+}
+.sprite-d120 {
+  background-position: -304px -904px;
+}
+.sprite-d119 {
+  background-position: -334px -904px;
+}
+.sprite-d110 {
+  background-position: -364px -904px;
+}
+.sprite-chuzuche {
+  background-position: -394px -904px;
+}
+.sprite-xiaoqiche {
+  background-position: -4px -934px;
+}
+.sprite-suv {
+  background-position: -34px -934px;
+}
+.sprite-kacha {
+  background-position: -64px -934px;
+}
+.sprite-lunchuan {
+  background-position: -94px -934px;
+}
+.sprite-kuaiting {
+  background-position: -124px -934px;
+}
+.sprite-honglvdeg {
+  background-position: -154px -934px;
+}
+.sprite-luzhang {
+  background-position: -184px -934px;
+}
+.sprite-xiyan {
+  background-position: -214px -934px;
+}
+.sprite-jingzhixiyan {
+  background-position: -244px -934px;
+}
+.sprite-zixinche {
+  background-position: -274px -934px;
+}
+.sprite-zoulu {
+  background-position: -304px -934px;
+}
+.sprite-nan1 {
+  background-position: -334px -934px;
+}
+.sprite-nv1 {
+  background-position: -364px -934px;
+}
+.sprite-nannv {
+  background-position: -394px -934px;
+}
+.sprite-yinger {
+  background-position: -4px -964px;
+}
+.sprite-matong {
+  background-position: -34px -964px;
+}
+.sprite-cesuo {
+  background-position: -64px -964px;
+}
+.sprite-xizao {
+  background-position: -94px -964px;
+}
+.sprite-taohua {
+  background-position: -124px -964px;
+}
+/* ------------豆豆表情--------------- */
+.sprite-dood_aida {
+  background-position: -154px -964px;
+}
+.sprite-dood_aoman {
+  background-position: -184px -964px;
+}
+.sprite-dood_baiyan {
+  background-position: -214px -964px;
+}
+.sprite-dood_bishi {
+  background-position: -244px -964px;
+}
+.sprite-dood_bizui {
+  background-position: -274px -964px;
+}
+.sprite-dood_bugaoxin {
+  background-position: -304px -964px;
+}
+.sprite-dood_buxie {
+  background-position: -334px -964px;
+}
+.sprite-dood_ciya {
+  background-position: -364px -964px;
+}
+.sprite-dood_daxiao {
+  background-position: -394px -964px;
+}
+.sprite-dood_deyi {
+  background-position: -4px -994px;
+}
+.sprite-dood_fanu {
+  background-position: -34px -994px;
+}
+.sprite-dood_fenle {
+  background-position: -64px -994px;
+}
+.sprite-dood_ganga {
+  background-position: -94px -994px;
+}
+.sprite-dood_guzhang {
+  background-position: -124px -994px;
+}
+.sprite-dood_haixiu {
+  background-position: -154px -994px;
+}
+.sprite-dood_heng {
+  background-position: -184px -994px;
+}
+.sprite-dood_huachi {
+  background-position: -214px -994px;
+}
+.sprite-dood_huaixiao {
+  background-position: -244px -994px;
+}
+.sprite-dood_jinya {
+  background-position: -274px -994px;
+}
+.sprite-dood_kelian {
+  background-position: -304px -994px;
+}
+.sprite-dood_koubi {
+  background-position: -334px -994px;
+}
+.sprite-dood_ku {
+  background-position: -364px -994px;
+}
+.sprite-dood_kun {
+  background-position: -394px -994px;
+}
+.sprite-dood_lenghan {
+  background-position: -4px -1024px;
+}
+.sprite-dood_liuhan {
+  background-position: -34px -1024px;
+}
+.sprite-dood_liulei {
+  background-position: -64px -1024px;
+}
+.sprite-dood_nanguo {
+  background-position: -94px -1024px;
+}
+.sprite-dood_nu {
+  background-position: -124px -1024px;
+}
+.sprite-dood_qiaoda {
+  background-position: -154px -1024px;
+}
+.sprite-dood_qiexiao {
+  background-position: -184px -1024px;
+}
+.sprite-dood_qingqing {
+  background-position: -214px -1024px;
+}
+.sprite-dood_se {
+  background-position: -244px -1024px;
+}
+.sprite-dood_shuai {
+  background-position: -274px -1024px;
+}
+.sprite-dood_shuijiao {
+  background-position: -304px -1024px;
+}
+.sprite-dood_tiaopi {
+  background-position: -334px -1024px;
+}
+.sprite-dood_touxiao {
+  background-position: -364px -1024px;
+}
+.sprite-dood_weiqu {
+  background-position: -394px -1024px;
+}
+.sprite-dood_weixiao {
+  background-position: -4px -1054px;
+}
+.sprite-dood_huaxiao {
+  background-position: -34px -1054px;
+}
+.sprite-dood_xu {
+  background-position: -64px -1054px;
+}
+.sprite-dood_yingxian {
+  background-position: -94px -1054px;
+}
+.sprite-dood_yiwen {
+  background-position: -124px -1054px;
+}
+.sprite-dood_youhengheng {
+  background-position: -154px -1054px;
+}
+.sprite-dood_yun {
+  background-position: -184px -1054px;
+}
+.sprite-dood_zaijian {
+  background-position: -214px -1054px;
+}
+.sprite-dood_zhemo {
+  background-position: -244px -1054px;
+}
+.sprite-dood_zhuakaung {
+  background-position: -274px -1054px;
+}
+.sprite-dood_zuohengheng {
+  background-position: -304px -1054px;
+}
+.sprite-dood_wulian {
+  background-position: -334px -1054px;
+}

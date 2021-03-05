@@ -1,0 +1,164 @@
+
+
+$bg_color_map: (
+  'theme-orange': $--color-theme-orange,
+  'theme-blue': $--color-theme-blue,
+  'theme-grey': $--color-theme-grey,
+  'theme-purple': $--color-theme-purple,
+  'theme-green': $--color-theme-green,
+  'theme-special': $--color-theme-purple,
+);
+
+$bg_color_map_work: (
+  'theme-orange': $--color-theme-orange,
+  'theme-blue': $--color-theme-blue,
+  'theme-grey': $--color-theme-grey,
+  'theme-purple': $--color-theme-purple,
+  'theme-green': $--color-theme-green,
+);
+
+$font_color_map: (
+  'theme-orange': $--color-text-theme-orange,
+  'theme-blue': $--color-text-theme-blue,
+  'theme-grey': $--color-text-theme-grey,
+  'theme-purple': $--color-text-primary-purple,
+  'theme-green': $--color-text-theme-green,
+  'theme-special': $--color-text-primary-purple,
+);
+
+$font_color_theme_light_map: (
+  'theme-orange': $--color-light-theme-orange,
+  'theme-blue': $--color-light-theme-blue,
+  'theme-grey': $--color-light-theme-grey,
+  'theme-purple': $--color-light-theme-purple,
+  'theme-green': $--color-light-theme-green,
+  'theme-special': $--color-light-theme-purple,
+);
+
+/* 副文本色 */
+$font_color_light_map: (
+  'theme-orange': $--color-text-light-theme-orange,
+  'theme-blue': $--color-text-light-theme-blue,
+  'theme-grey': $--color-text-light-theme-grey,
+  'theme-purple': $--color-text-light-theme-purple,
+  'theme-green': $--color-text-light-theme-green,
+  'theme-special': $--color-text-light-theme-purple,
+);
+
+/* 浅文本色 */
+$font_color_lighter_map: (
+  'theme-orange': $--color-text-lighter-theme-orange,
+  'theme-blue': $--color-text-lighter-theme-bule,
+  'theme-grey': $--color-text-lighter-theme-grey,
+  'theme-purple': $--color-text-lighter-theme-puple,
+  'theme-green': $--color-text-lighter-theme-green,
+  'theme-special':  $--color-text-lighter-theme-puple,
+);
+
+$font_color_type: (
+  'normal': $font_color_map,
+  'light' : $font_color_light_map,
+  'lighter' : $font_color_lighter_map,
+  'theme': $bg_color_map,
+  'themelight': $font_color_theme_light_map
+);
+
+$color-transparency50_map: (
+  'theme-orange':  $--color-transparency-large-orange,
+  'theme-blue':  $--color-transparency-large-blue,
+  'theme-grey':  $--color-transparency-large-grey,
+  'theme-purple':  $--color-transparency-large-purple,
+  'theme-green':  $--color-transparency-large-green,
+  'theme-special':  $--color-transparency-large-purple,
+);
+
+$color-transparency30_map: (
+  'theme-orange':  $--color-transparency-small-orange,
+  'theme-blue':  $--color-transparency-small-blue,
+  'theme-grey':  $--color-transparency-small-grey,
+  'theme-purple':  $--color-transparency-small-purple,
+  'theme-green':  $--color-transparency-small-green
+);
+
+$color-skeleton_map: (
+  'theme-orange':  $--color-transparency-medium-orange,
+  'theme-blue':  $--color-transparency-medium-blue,
+  'theme-grey':  $--color-transparency-medium-grey,
+  'theme-purple':  $--color-transparency-medium-purple,
+  'theme-green':  $--color-transparency-medium-green,
+  'theme-special':  $--color-transparency-medium-purple,
+);
+
+$bg_color_hover_map: (
+  'theme-orange':  $--color-hover-theme-orange,
+  'theme-blue':  $--color-hover-theme-blue,
+  'theme-grey':  $--color-hover-theme-grey,
+  'theme-purple':  $--color-hover-theme-purple,
+  'theme-green':  $--color-hover-theme-green,
+  'theme-special': $--color-hover-theme-purple
+);
+
+
+$bg_color_active_map: (
+  'theme-orange':  $--color-active-theme-orange,
+  'theme-blue':  $--color-active-theme-blue,
+  'theme-grey':  $--color-active-theme-grey,
+  'theme-purple':  $--color-active-theme-purple,
+  'theme-green':  $--color-active-theme-green,
+  'theme-special':  $--color-active-theme-purple,
+);
+
+$bg_color_child_item_active_map: (
+  'theme-orange':  $--color-child-item-active-theme-orange,
+  'theme-blue':  $--color-child-item-active-theme-blue,
+  'theme-grey':  $--color-child-item-active-theme-grey,
+  'theme-purple':  $--color-child-item-active-theme-purple,
+  'theme-green':  $--color-child-item-active-theme-green,
+);
+
+$theme_image_map: (
+  'theme-orange':  $--background-img-theme-orange,
+  'theme-blue':  $--background-img-theme-blue,
+  'theme-grey':  $--background-img-theme-grey,
+  'theme-purple':  $--background-img-theme-purple,
+  'theme-green':  $--background-img-theme-green,
+  'theme-special':  $--background-img-theme-special,
+);
+$theme_mark_image_map: (
+  'theme-orange':  $--background-img-theme-mark-orange,
+  'theme-blue':  $--background-img-theme-mark-blue,
+  'theme-grey':  $--background-img-theme-mark-grey,
+  'theme-purple':  $--background-img-theme-mark-purple,
+  'theme-green':  $--background-img-theme-mark-green,
+  'theme-special':  $--background-img-theme-special,
+);
+
+
+$bg_msgbuble_map: (
+  'theme-orange':  $--background-msgbuble-theme-orange,
+  'theme-blue':  $--background-msgbuble-theme-blue,
+  'theme-grey':  $--background-msgbuble-theme-grey,
+  'theme-purple':  $--background-msgbuble-theme-purple,
+  'theme-green':  $--background-msgbuble-theme-green,
+  'theme-special':  $--background-msgbuble-theme-purple
+);
+
+$background-color-type: (
+  'normal': $bg_color_map,
+  'hover': $bg_color_hover_map,
+  'active': $bg_color_active_map,
+  'msgbuble': $bg_msgbuble_map,
+  'transparency30': $color-transparency30_map,
+  'transparency50': $color-transparency50_map,
+  'child-active': $bg_color_child_item_active_map,
+  'skeleton': $color-skeleton_map
+);
+
+$navbar_bg_map: (
+  'theme-orange': $--color-theme-orange,
+  'theme-blue': $--color-theme-blue,
+  'theme-grey': $--color-theme-grey,
+  'theme-purple': $--color-theme-purple,
+  'theme-green': $--color-theme-green,
+  'theme-special':   $--navbar-bg-special
+);

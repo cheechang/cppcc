@@ -1,0 +1,35 @@
+.button {
+  border: none;
+  // &:active {
+  //   box-shadow: $--box-shadow-lr-active;
+  // }
+  &.label-before {
+    padding-right: 8px;
+    icon {
+      margin-right: 4px;
+      margin-left: 0;
+    }
+    .button-label {
+      padding-right: 8px;
+    }
+  }
+  &.v-button-text {
+    border: none;
+    color: $primary;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.v-button-disable {
+    // color: #b4bccc;
+    cursor: not-allowed;
+    background-image: none;
+    // border-color: #e6ebf5;
+    background: gainsboro;
+    color: #8b8c8c;
+    &:hover{
+      background: gainsboro;
+      color: #8b8c8c;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.dialog {
+  z-index: 999;
+  .modal-card {
+    max-width: 460px;
+    width: auto;
+    -webkit-app-region: no-drag;
+    .modal-card-head {
+      font-size: 1.25rem;
+      font-weight: 600;
+      padding: 12px;
+      .modal-card-title {
+        font-size: 1rem;
+      }
+    }
+    .modal-card-body {
+      .field {
+        margin-top: 16px;
+      }
+      &.is-titleless {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+    .modal-card-foot {
+      justify-content: flex-end;
+      padding: 6px 10px;
+      .button {
+        display: inline; // Fix Safari centering
+        min-width: 5em;
+        font-weight: 600;
+      }
+    }
+    @include tablet {
+      min-width: 320px;
+    }
+  }
+  .background-drag{
+    -webkit-app-region: drag
+  }
+}

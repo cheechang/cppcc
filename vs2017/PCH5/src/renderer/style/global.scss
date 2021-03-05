@@ -1,0 +1,57 @@
+
+$--color-grey: (
+  base:       #9E9E9E,
+  lighten-5:  #fafafa,
+  lighten-4:  #f5f5f5,
+  lighten-3:  #eeeeee,
+  lighten-2:  #e0e0e0,
+  lighten-1:  #bdbdbd,
+  darken-1:   #757575,
+  darken-2:   #616161,
+  darken-3:   #424242,
+  darken-4:   #212121
+);
+
+$--color-blue: (
+  blue:       #2196F3,
+  lighten-5:  #E3F2FD,
+  lighten-4:  #BBDEFB,
+  lighten-3:  #90CAF9,
+  lighten-2:  #64B5F6,
+  lighten-1:  #42A5F5,
+  darken-1:   #1E88E5,
+  darken-2:   #1976D2,
+  darken-3:   #1565C0,
+  darken-4:   #0D47A1,
+  accent-1:   #82B1FF,
+  accent-2:   #448AFF,
+  accent-3:   #2979FF,
+  accent-4:   #2962FF
+);
+
+$z-index: (
+  modal              : 200,
+  navigation         : 100,
+  menu               : 90,
+  tip                : 80,
+  box                : 70,
+  image              : 60,
+  btn                : 50,
+  none               : 0,
+  negative           : -1
+);
+
+@import "./theme/scss/variable-primary.scss";
+@import "./theme/scss/variable-orange.scss";
+@import "./theme/scss/variable-blue.scss";
+@import "./theme/scss/variable-grey.scss";
+@import "./theme/scss/variable-purple.scss";
+@import "./theme/scss/variable-special.scss";
+@import "./theme/scss/variable-green.scss";
+@import './theme/utils/map.scss';
+@import './theme/utils/mixin.scss';
+
+
+
+
+

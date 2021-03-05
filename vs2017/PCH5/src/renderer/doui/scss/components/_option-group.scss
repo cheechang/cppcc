@@ -1,0 +1,24 @@
+@import '../mixins/ellipsis.scss';
+$class-prefix: 'd-option-group';
+.#{$class-prefix} {
+  &{
+    @include ellipsis();
+    width: 100%;
+    line-height: 1.5;
+    text-align: left;
+    transition: all .3s;
+    box-sizing: border-box;
+    padding-top: 5px;
+  }
+  &-title{
+    color: $--option-group-color;
+    padding: 6px 0px 6px 8px;
+    font-size: 18px;
+    &:hover{
+      cursor: default;
+    }
+  }
+  .d-option{
+    padding:6px 20px;
+  }
+}

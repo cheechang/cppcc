@@ -1,0 +1,27 @@
+.d-card{
+  border-radius: $--card-border-radius;
+  border: 1px solid $--card-border-color;
+  background-color: $--color-white;
+  overflow: hidden;
+  color: $--color-black;
+  transition: 0.3s;
+  .d-card__header {
+    padding: #{$--card-padding - 5 $--card-padding};
+    // padding: 18px 20px;
+    border-bottom: 1px solid $--card-border-color;
+    box-sizing: border-box;
+  }
+  .d-card__body {
+    height: 100%;
+    padding: $--card-padding;
+  }
+  &.is-always-shadow {
+    box-shadow: $--box-shadow-light;
+  }
+  &.is-hover-shadow {
+    &:hover,
+    &:focus {
+      box-shadow: $--box-shadow-light;
+    }
+  }
+}

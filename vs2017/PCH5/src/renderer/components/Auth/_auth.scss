@@ -1,0 +1,154 @@
+.logo{
+  width: 114px;
+  height: 114px;
+  background: $--color-white;
+  position: absolute;
+  top: -57px;
+  left: 50%;
+  margin-left: -57px;
+  @include z-index(none);
+  img {
+    border-radius: $--border-radius-circle;
+  }
+}
+
+// 选择记住密码/自动登录
+.checkbox-group {
+  display: flex;
+  //justify-content: space-between;
+  padding: 15px 0 0px 0;
+  .remember-pwd{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .auto-login{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  // /deep/ .v-checkbox {
+  //   .v-checkbox-label {
+  //     .is-checked {
+  //       background-color: get-blue-color(blue)!important;
+  //       border-color: get-blue-color(blue)!important;
+  //     }
+  //   }
+  // }
+}
+// 可点击文本按钮 
+.more-button-layout{
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .vertical-line{
+    display: inline-block;
+    border-left: 1px solid #E0E0E0;
+    height: 15px;
+    margin: 0 10px;
+  }
+}
+
+// 翻转动画
+.xe678{
+  transition: 0.3s;
+  // transform-origin: 6px 9px;
+  font-size: $--font-size-small;
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+.scale-xe678{
+  transform: rotate(180deg);
+  transform-origin: 6px 9px;
+  transition: 0.3s;
+}
+.scale-icon{
+  transform: rotate(180deg);
+  transform-origin: 12px 10.5px;
+  transition: 0.3s;
+}
+
+// auth 界面输入框默认样式
+.auth-input{
+  margin: 10px 0 0 0;
+  display: flex;
+  border-bottom: 1px solid $--border-color-blue !important;
+}
+.auth-icon{
+  display: flex;
+  min-width: 36px;
+  justify-content: flex-start;
+  align-items: center;
+  color: get-grey-color(darken-4);
+  position: relative;
+  .icon{
+    color: get-grey-color(darken-4);
+    // position: absolute;
+    // top: 2px;
+  }
+}
+// 处理布尔玛引起的字体大小冲突
+.auth-font{
+  // font-size: $--font-size-mid !important;
+}
+// auth 界面输入框默认样式
+.auth-button{
+  margin: 18px 0 4px 0;
+}
+.auth-nation{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+// 按钮不可点击样式
+.is-disable{
+  color: rgba(0,0,0,0.26) !important;
+  background: rgba(0,0,0,0.12) !important;
+  box-shadow: none !important;
+  &:active{
+    box-shadow: none !important;
+  }
+}
+
+// 可点击文本样式
+.txt-link{
+  color: get-blue-color(darken-3);
+  &:hover{
+    cursor: pointer;
+    color: get-blue-color(blue);
+  }
+}
+
+.auth-description{
+  font-size: $--font-size-small;
+  color: get-grey-color(lighten-1);
+  p:first-child{
+    margin-top: 13px;
+  }
+}
+
+// 边框阴影
+.boxshadow-0{
+  box-shadow: $--box-shadow-base
+}
+// 右、下边框阴影
+.boxshadow-1{
+  box-shadow: $--box-shadow-base
+}
+// 下边框阴影
+.boxshadow-2{
+  box-shadow: $--box-shadow-lr
+}
+// 点击显示阴影
+.active-boxshadow{
+  &:active{
+    box-shadow: $--box-shadow-rd
+  }
+}

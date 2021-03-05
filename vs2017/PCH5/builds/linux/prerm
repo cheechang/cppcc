@@ -1,0 +1,31 @@
+#!/bin/bash
+
+PROCESS=`ps -ef | grep "Linkdood$" | grep -v grep | grep -v PPID|awk '{ print $2}'`
+for i in $PROCESS
+do
+  echo "Kill the linkdood process [ $i ]"
+  kill -9 $i
+done
+
+PROCESSSCREEN=`ps -ef | grep "screenshot" | grep -v grep | grep -v PPID|awk '{ print $2}'`
+for k in $PROCESSSCREEN
+do
+  echo "Kill the screenshot process [ $k ]"
+  kill -9 $k
+done
+
+loginNames=`who | awk '{print $1}' | uniq`
+for loginName in $loginNames
+do
+  echo "the loginName [ $loginName ]"
+  homeDir=`cat /etc/passwd | grep $loginName | awk -F: '{print $6}'`
+  strName=$homeDir/.local/share/Linkdood/Global@vrv
+  if [ -f "$strName" ]; then
+      rm $homeDir/.local/share/Linkdood/Global@vrv
+  fi 
+done
+
+usrLocalDesktop=/usr/share/applications/Linkdood.desktop
+if [ -f "$usrLocalDesktop" ]; then
+    rm $usrLocalDesktop
+fi

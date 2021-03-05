@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <title>图片查看器</title> -->
+  <link rel="stylesheet" href="viewer.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    #sucaihuo {
+      width: 700px;
+      margin: 0 auto;
+      font-size: 0;
+      background: #fff;
+      display: none
+    }
+
+    #sucaihuo li {
+      display: inline-block;
+      width: 32%;
+      margin-left: 1%;
+      padding-top: 1%;
+    }
+
+    #sucaihuo li img {
+      width: 100%;
+    }
+
+    .viewer-close {
+      display: none;
+    }
+
+    .viewer-title {
+      display: none;
+    }
+
+    .modal-print {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-print .modal-background {
+      z-index: -1;
+      position: absolute;
+      background: #ddd;
+      width: 100%;
+      height: 100%;
+    }
+
+    .modal-print .print-device-list {
+      position: absolute;
+      background: #fff;
+      z-index: 9999;
+      font-size: 14px;
+      font-family: '微软雅黑';
+      padding: 8px 0px;
+      border-radius: 3px;
+      list-style: none;
+      box-shadow: 0 0 10px 0 rgba(101, 111, 122, 0.5);
+    }
+
+    .print-device-list li {
+      height: 33px;
+      line-height: 33px;
+      padding: 0px 14px;
+    }
+
+    .print-device-list li:hover {
+      /* background: #ccc; */
+      background-color: rgb(223, 223, 223);
+      color: #000000;
+    }
+
+    .right-menu {
+      /* width: 80px; */
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background: #fff;
+      z-index: 9999;
+      font-size: 14px;
+      font-family: '微软雅黑';
+      padding: 8px 0px;
+      border-radius: 3px;
+      display: none;
+      list-style: none;
+      box-shadow: 0 0 10px 0 rgba(101, 111, 122, 0.5);
+    }
+
+    .right-menu li {
+      height: 33px;
+      line-height: 33px;
+      padding: 0px 14px;
+      /* padding-right: 1rem; */
+    }
+
+    .right-menu .copy-item {
+      border-bottom: solid 1px rgb(223, 223, 223);
+    }
+
+    .right-menu li:hover {
+      /* background: #ccc; */
+      background-color: rgb(223, 223, 223);
+      color: #000000;
+    }
+
+    .viewer-next {
+      display: none;
+      position: fixed;
+      right: 8px;
+      top: 50%;
+      margin-top: -6px;
+    }
+
+    .viewer-prev {
+      display: none;
+      position: fixed;
+      left: 8px;
+      top: 50%;
+      margin-top: -6px;
+    }
+
+  </style>
+</head>
+
+<body style="background: transparent; -webkit-app-region: drag">
+  <ul id="sucaihuo">
+  </ul>
+
+  <ul class="right-menu">
+    <li class="menu-item copy-item" onclick="copy()">复制</li>
+    <li class="menu-item foward-item" onclick="foward()">转发</li>
+    <!-- <li class="menu-item print-item" onclick="print()">打印</li> -->
+    <li class="menu-item save-item" onclick="saveAs()">导出</li>
+    <li class="menu-item qrcode-item" onclick="identifyQrcode(true)">识别二维码</li>
+  </ul>
+  <div class="modal-print">
+    <div class="modal-background"></div>
+    <ul class="print-device-list"></ul>
+  </div>
+  <svg class="img-process-rate" style="display: none;" height="150" width="110">
+    <circle cx="55" cy="55" r="20" fill="none" stroke="grey" stroke-width="8" stroke-linecap="round" />
+    <circle class="process-rate" id="big-process" cx="55" cy="55" r="20" fill="none" stroke="#20a0ff" stroke-width="8" stroke-dasharray="0,10000" />
+  </svg>
+
+  <div class="error-tip" style="display: none;">图片已过期或已被清理</div>
+  <script src="viewer.min.js"></script>
+  <script src="img.js"></script>
+  <script>
+    const remote = window.require('electron').remote;
+    const service = remote.getGlobal('service');
+    const clipboard = window.require('electron').clipboard
+    const nativeImage = window.require('electron').nativeImage
+    const ipcRenderer = window.require('electron').ipcRenderer
+    const fs = require('fs')
+    
+    const jsQR = require('jsqr');
+    const Jimp = require('jimp');
+    // const printImg = require('./print.js');
+    
+    var targetId,
+      msgId,
+      viewer, index, imgMsg, nineIndex, nineImg, model, user_imgPath, currentMsg, isMixMsg, searchParams, isMac;
+
+    window.addEventListener('DOMContentLoaded', function() {
+
+      searchParams = new URLSearchParams(document.location.search)
+      console.log('searchParams:::', searchParams)
+      targetId = searchParams.get("targetId")
+      msgId = searchParams.get("msgId")
+      model = searchParams.get("mode")
+      isMixMsg = searchParams.get("isMixMsg")
+      console.log('targetId::::', targetId)
+      user_imgPath = service.config.userImgPath(null);
+      isMac = /macintosh|mac os x/i.test(navigator.userAgent);
+      console.log('isMac', isMac)
+
+      /**
+       * 正常消息处理 
+       */
+      let thumbImg = searchParams.get("thumbImg")
+      newViewer(thumbImg)
+
+      /**
+       * 暂时处理国际化
+       * 后续优化 
+       */
+       let language = service.config.getLanguage()
+      console.log('language:::', language)
+      if (language === 'en-US') {
+        const copyItem = document.querySelector('.copy-item') // 右键菜单节点
+        const fowardItem = document.querySelector('.foward-item') // 右键菜单节点
+        const saveItem = document.querySelector('.save-item') // 右键菜单节点
+        const qrcodeItem = document.querySelector('.qrcode-item') // 右键菜单节点
+        const errorTip = document.querySelector('.error-tip')
+        copyItem.innerHTML = 'Copy'
+        fowardItem.innerHTML = 'Forward'
+        saveItem.innerHTML = 'Save As'
+        qrcodeItem.innerHTML = 'Identity QR-Code'
+        errorTip.innerHTML = 'Resource has expired'
+      }
+      const imgContainer = document.querySelector('body') // 容器
+      const rightMenu = document.querySelector('.right-menu') // 右键菜单节点
+      const deviceList = document.querySelector('.modal-print')
+
+      deviceList.onclick = function() {
+        deviceList.style.display = 'none'
+        var list = document.querySelector('.print-device-list')
+        var childs = list.childNodes;
+        for(var i = 0; i < childs.length; i++) { 
+          list.removeChild(childs[i]); 
+        }
+      }
+
+      rightMenu.onclick = function() {
+        rightMenu.style.display = 'none'
+      }
+
+      imgContainer.onclick = function() {
+        rightMenu.style.display = 'none'
+      }
+
+      imgContainer.oncontextmenu = function(e) {
+        console.log('rightClick', e)
+        identifyQrcode(false)
+        rightMenu.style.display = 'block'
+        let minusWidth = 80
+        minusWidth = e.clientX + minusWidth < document.body.clientWidth ? 0 : minusWidth
+
+        let addHeight = 108
+        addHeight = addHeight + e.clientY < document.body.clientHeight ? 0 : addHeight
+
+
+        rightMenu.style.top = e.clientY - addHeight + 'px'
+        rightMenu.style.left = e.clientX - minusWidth + 'px'
+      };
+
+
+
+      ipcRenderer.on('handleImage', (e, args) => {
+        console.log('args>>>', args)
+        if (args.operaType === 1) {
+          // imgMsg.push(args.msg)
+          getImgMsg().then((resource) => {
+            console.log('resource::', resource)
+            imgMsg = resource.msgs
+            console.log('imgMsg:::', imgMsg)
+          })
+        } else {
+          revokeImageindex = imgMsg.findIndex((e) => {
+            return e.msgId === args.imgId.toString()
+          })
+          console.log('index', index)
+          console.log('revokeImageindex', revokeImageindex)
+          if (revokeImageindex === index) {
+
+            console.log('same:::')
+            console.log('viewer:::', viewer)
+            let direction = index <= imgMsg.length - 1 ? index - 1 : index + 1
+            console.log('direction::', direction)
+            if (direction < 0) {
+              window.close()
+              return
+            }
+            model = 'single'
+            let nowImg = imgMsg[direction]
+            console.log('nowImg::', nowImg)
+            if (nowImg.msgType === 28 ) {
+              console.log('revoce muti')
+              model = 'muti'
+              nineIndex = nowImg.nine.length - 1
+              currentMsg = nowImg
+              console.log('nineIndex::', nineIndex)
+              nowImg = nowImg.nine[nineIndex]
+              console.log('currentMsg:::', currentMsg)
+            }
+            showImg(nowImg)
+          }
+          if (revokeImageindex <= index) {
+            index--
+          }
+          console.log('index::::', index)
+          imgMsg.splice(revokeImageindex, 1)
+          console.log('imgMsg:::', imgMsg)
+        }
+      })
+    })
+
+  </script>
+
+  <style>
+    .viewer-download {
+      background: url('../../resources/images/message/download.svg') no-repeat;
+      background-size: 60%;
+      background-position-x: 5px;
+      background-position-y: 4px;
+    }
+
+    .process-rate {
+      transform-origin: 55px 55px;
+      transform: rotate(-90deg);
+      transition: stroke-dasharray .3s ease-in;
+    }
+
+    .img-process-rate {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin: auto;
+      z-index: 9999;
+      padding: 2px 0px;
+    }
+    .qrcode-item {
+      display: none
+    }
+
+    .error-tip {
+      width: 180px;
+      height: 24px;
+      line-height: 24px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 14px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin: auto;
+      z-index: 9999;
+      padding: 2px 0px;
+    }
+
+  </style>
+
+</body>
+
+</html>

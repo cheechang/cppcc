@@ -1,0 +1,149 @@
+.d-input-wrapper{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  .d-input-box{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 2.25em;
+    background: $--color-white;
+    &.d-input-is-disabled{
+      .d-input:hover{
+        cursor: not-allowed!important;
+      }
+      background-color: #F5F7FA!important;
+      .d-input{
+        background-color: #F5F7FA!important;
+      }
+      .slot:hover,.d-icon:hover{
+        cursor: not-allowed!important;
+      }
+    }
+    .d-input{
+      flex: 1 1 auto;
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      color: $--color-text-primary;
+      caret-color: $--border-color-blue-darken;
+      font-size: inherit;
+      text-align: start;
+      line-height: 2.25em;
+      &::-webkit-input-placeholder{
+        color: $--input-placeholder-color;
+      }
+      &.no-right-padding{
+        padding-right: 0px !important;
+      }
+      &.no-left-padding{
+        padding-left: 0px !important;
+      }
+    }
+    .icon{
+      height: 100%;
+      padding: 0 8px;
+      display: flex;
+      flex: none;
+      justify-content: center;
+      align-items: center;
+      font-size: inherit;
+      color: map-get($--color-grey, 'base');
+      &:not(.slot):hover{
+        cursor: pointer!important;
+      }
+      &.slot{
+        .d-icon{
+          width: 25px;
+        }
+      }
+    }
+    .count{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: inherit;
+      color: map-get($--color-grey, 'base');
+      .count-word{
+        display: inline-block;
+        text-align: center;
+        padding: 0px 5px;
+        white-space: nowrap;
+      }
+    }
+    &.is-exceed{
+      .count{
+        color: $--color-danger!important;
+      }
+    }
+  }
+  // 单线
+  .d-input-single-line{
+    border-top-left-radius: $--border-radius-base;
+    border-top-right-radius: $--border-radius-base;
+    border-bottom: 1px solid;
+    border-bottom-color: $--border-color-blue;
+    &:not(.is-exceed)::after{
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0px;
+      z-index: 1;
+      border-width: 1px 0px;
+      border-color: $--border-color-blue-darken;
+      border-style: solid;
+      width: 100%;
+      transform: scaleX(0);
+      transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+    &.d-input-is-focused::after{
+      transform: scaleX(1);
+    }
+    &.d-input-is-disabled{
+      overflow: hidden;
+    }
+    &.is-exceed{
+      border-color: $--color-danger!important;
+    }
+  }
+  // 边框线
+  .d-input-outline{
+    overflow: hidden;
+    border: 1px solid;
+    border-color: $--border-color-blue;
+    border-radius: $--border-radius-base;
+    &:not(.is-exceed).d-input-is-focused{
+      border-color: $--border-color-blue-darken!important;
+    }
+    &.is-exceed{
+      border-color: $--color-danger!important;
+    }
+  }
+}
+.d-input-is-small{
+  font-size: $--input-font-size-small!important;
+}
+
+.d-input-is-medium{
+  font-size: $--input-font-size-medium!important;
+}
+.d-input-is-large{
+  font-size: $--input-font-size-large!important;
+}
+.d-input-is-default{
+  font-size: $--input-font-size-default;
+}
+.loading{
+  animation: loading 1s linear infinite;
+}
+@keyframes loading{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

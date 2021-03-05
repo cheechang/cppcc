@@ -1,0 +1,102 @@
+.d-checkbox{
+  cursor: pointer;
+  box-sizing: border-box;
+  user-select: none;
+  position: relative;
+  &.checkbox{
+   outline: none;
+   display: inline-flex;
+   align-items: center;
+   & + .checkbox {
+   margin-left: 0.5em;
+   }
+ 
+ & + .checkbox {
+    margin-left: 0.5em;
+  }
+input[type="checkbox"] {
+ position: absolute;
+ left: 0;
+ opacity: 0;
+ outline: none;
+ z-index: -1;
+ + .check {
+  width: 1.00em;
+  height: 1.00em;
+  // flex-shrink: 0;
+  border-radius: 4px;
+  border: 2px solid map-get($--color-grey, darken-1);
+  &.is-small {
+    width: $--checkbox-small;
+    height: $--checkbox-small;
+   }
+   &.is-medium{
+    width: $--checkbox-medium;
+    height: $--checkbox-medium;
+   }
+   &.is-large {
+    width: $--checkbox-large;
+    height: $--checkbox-large;
+   }
+   
+ }
+  &:checked + .check {
+   background: $--color-primary url(checkmark($--color-white)) no-repeat center center;
+   border-color: $--color-primary;
+   &.d-checkbox-warning{
+    background-color: $--color-warning;
+    border-color:$--color-warning;
+      &:hover{
+        border-color:$--color-warning !important;
+      }
+    }
+   &.d-checkbox-danger{
+    background-color: $--color-danger;
+    border-color:$--color-danger;
+      &:hover{
+        border-color:$--color-danger !important;
+      }
+    }
+   &.d-checkbox-info{
+    background-color: $--color-info;
+    border-color:$--color-info;
+      &:hover{
+        border-color:$--color-info !important;
+      }
+    }
+   &.d-checkbox-success{
+    background-color: $--color-success;
+    border-color:$--color-success;
+      &:hover{
+        border-color:$--color-success !important;
+      }
+    }
+
+   }
+  }
+  .control-label {
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+   user-select: none;
+   &:hover{
+    input[type=checkbox]:not(:disabled) + .check {
+      border-color: $--color-warning !important;
+    }
+   }
+}
+&[disabled] {
+   opacity: 0.5;
+   cursor: not-allowed;
+  }
+ }
+}
+.d-check_ripple {
+  user-select: none;
+  height: 1em;
+  padding: 5px;
+  &:hover{
+    color: map-get($--color-grey,  lighten-1);
+    opacity: 0.8;
+    border-radius: 8px;
+  }
+}

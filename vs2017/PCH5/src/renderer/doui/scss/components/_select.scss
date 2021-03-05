@@ -1,0 +1,41 @@
+$class-prefix: 'd-select';
+.#{$class-prefix} {
+  &{
+    width: 100%;
+    cursor: pointer!important;
+    font-size: $--select-default;
+    height: 2.25em;
+    position: relative;
+    .d-input{
+      cursor: pointer!important;
+    }
+    &-expand{
+      transition: transform .3s;
+      transform-origin: 50% 50%;
+    }
+    &-is-expand{
+      transform: rotate(180deg);
+    }
+    .d-option,.d-option-group,.d-selet-no-data,.d-input-wrapper{
+      font-size: $--select-default;
+    }
+  }
+  &-small{
+    font-size: $--select-small;
+    .d-option,.d-option-group,.d-selet-no-data,.d-input-wrapper{
+      font-size: $--select-small;
+    }
+  }
+  &-medium{
+    font-size: $--select-medium;
+    .d-option,.d-option-group,.d-selet-no-data,.d-input-wrapper{
+      font-size: $--select-medium;
+    }
+  }
+  &-large{
+    font-size: $--select-large;
+    .d-option,.d-option-group,.d-selet-no-data,.d-input-wrapper{
+      font-size: $--select-large;
+    }
+  }
+}

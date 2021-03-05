@@ -1,0 +1,144 @@
+$--color-grey: (
+  base:       #9E9E9E,
+  lighten-5:  #fafafa,
+  lighten-4:  #f5f5f5,
+  lighten-3:  #eeeeee,
+  lighten-2:  #e0e0e0,
+  lighten-1:  #bdbdbd,
+  darken-1:   #757575,
+  darken-2:   #616161,
+  darken-3:   #424242,
+  darken-4:   #212121
+);
+
+$--color-blue: (
+  blue:       #2196F3,
+  lighten-5:  #E3F2FD,
+  lighten-4:  #BBDEFB,
+  lighten-3:  #90CAF9,
+  lighten-2:  #64B5F6,
+  lighten-1:  #42A5F5,
+  darken-1:   #1E88E5,
+  darken-2:   #1976D2,
+  darken-3:   #1565C0,
+  darken-4:   #0D47A1,
+  accent-1:   #82B1FF,
+  accent-2:   #448AFF,
+  accent-3:   #2979FF,
+  accent-4:   #2962FF
+);
+
+$z-index: (
+  modal              : 200,
+  navigation         : 100,
+  menu               : 90,
+  tip                : 80,
+  box                : 70,
+  image              : 60,
+  btn                : 50,
+  none               : 0,
+  negative           : -1
+);
+
+/**
+ * 字体
+ */
+ $--font-size-normal: 14px;
+ $--font-size-small: 12px;
+
+/*
+* 颜色
+*/
+$--color-black:#000;
+$--color-white:#fff;
+$--color-success:#4CAF50;
+$--color-danger:#FF6060;
+$--color-info:#2196F3;
+$--color-primary:#1B69C1;
+$--color-warning:#FB9514;
+
+/**
+* 图标字体大小
+*/
+$--icon-size-mini: 16px;
+$--icon-size-small: 24px;
+$--icon-size-normal: 28px;
+$--icon-size-medium: 36px;
+$--icon-size-large: 40px;
+
+/**
+* 输入框字体大小
+*/
+$--input-font-size-small: 12px;
+$--input-font-size-default: 16px;
+$--input-font-size-medium: 20px;
+$--input-font-size-large: 24px;
+
+/**
+ * 按钮大小
+ */
+ $--button-size-small-height: 32px;
+ $--button-size-medium-height: 36px;
+ $--button-size-normal-height: 40px;
+ $--button-size-mini-height: 28px;
+ 
+ /**
+  * 按钮百分比透明度
+  */
+ $--button-hover-tint-percent: 20% !default;
+ $--button-active-shade-percent: 10% !default;
+
+/**
+ * 图标样式
+ */
+ $--avatar-size-default: 32px;
+ $--avatar-size-large: 40px;
+ $--avatar-size-small: 24px;
+ $--avatar-icon-size-default: 18px;
+ $--avatar-icon-size-large: 24px;
+ $--avatar-icon-size-small: 14px;
+
+ /**
+  * 徽章样式
+  */
+$--badge-radius: 10px !default;
+$--badge-font-size: 12px !default;
+$--badge-padding: 6px !default;
+$--badge-size: 18px !default;
+$--badge-dot-size: 8px !default;
+
+/**
+ * select样式
+ */
+$--select-default: $--input-font-size-default;
+$--select-large: $--input-font-size-large;
+$--select-medium: $--input-font-size-medium;
+$--select-small: $--input-font-size-small;
+
+/**
+* checkbox 大小
+*/
+$--checkbox-small: 14px ;
+$--checkbox-medium: 18px ;
+$--checkbox-large: 20px ;
+
+/** 
+* 单选框radio大小
+*/
+$--radio-size-mini: 14px;
+$--radio-size-small: 16px;
+$--radio-size-medium: 20px;
+
+
+/**
+* 单选框radio font-weight
+*/
+$--font-weight-primary:500 !default;
+
+/**
+* card 卡片样式
+*/ 
+$--card-border-radius: 4px;
+$--card-border-color: map-get($--color-grey, lighten-2 );
+$--card-padding: 20px;
+$--box-shadow-light: 6px 6px 12px  rgba(0, 0, 0, 0.1) !default;

@@ -1,0 +1,196 @@
+{
+  "name": "CPPCC",
+  "productName": "cppcc",
+  "homepage": "",
+  "version": "3.5.1",
+  "author": {
+    "name": "全国政协办公厅信息中心",
+    "email": "linpeiyuan@vrvmail.com.cn",
+    "url": "www.cppcc.gov.cn/"
+  },
+  "description": "全国政协委员移动履职平台",
+  "license": null,
+  "main": "./dist/electron/main.js",
+  "checkUpgrade": false,
+  "isWinXp": false,
+  "deviceInfo": "pc-win",
+  "scripts": {
+    "dev": "copy.bat win7 && electron-webpack dev",
+    "dev:mac": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "emss": "cross-env BUILD_TARGET=emss webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "copy.bat win7 && yarn dist -- --dir -c.compression=store -c.mac.identity=null && copy.bat remove",
+    "dist:xp": "copy.bat xp && yarn dist -- --dir -c.compression=store -c.mac.identity=null && copy.bat remove",
+    "dist:xpdev": "copy.bat xp && yarn dist -- --dir -c.compression=store -c.mac.identity=null && copy.bat start",
+    "dist:linuxdir": " yarn dist -- --dir -c.compression=store -c.mac.identity=null ",
+    "dist:mac": "yarn compile && electron-builder -c.mac.identity=null",
+    "dist:EMSS": "cross-env BUILD_TARGET=EMSS yarn compile && electron-builder",
+    "dist:Cordova": "cross-env BUILD_TARGET=Cordova yarn compile && electron-builder",
+    "upload": "cross-env BUILD_TARGET=upload node CD.js",
+    "download": "cross-env BUILD_TARGET=download node CD.js",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src test",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src test",
+    "fix-memory-limit": "cross-env LIMIT=6144 increase-memory-limit"
+  },
+  "private": true,
+  "build": {
+    "productName": "全国政协委员移动履职平台",
+    "appId": "vrv.linkdood.h5",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://114.255.32.34/pcdisth5/win/"
+      }
+    ],
+    "extraResources": [
+      {
+        "from": "./pcdist/",
+        "to": "./app/pcdist/"
+      }
+    ],
+    "linux": {
+      "category": "Development",
+      "executableName": "Linkdood"
+    },
+    "dmg": {
+      "icon": "vrv-static/resources/images/icons/mac/disk.icns",
+      "background": "vrv-static/resources/images/icons/mac/bg.png",
+      "title": "全国政协委员移动履职平台",
+      "iconSize": "120",
+      "contents": [
+        {
+          "x": "150",
+          "y": "190",
+          "type": "file"
+        },
+        {
+          "x": "400",
+          "y": "190",
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "vrv-static/resources/images/icons/mac/logo.icns",
+      "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "icon": "vrv-static/resources/images/icons/windows/logo",
+      "target": "nsis"
+    },
+    "asar": false,
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "全国政协委员移动履职平台"
+    },
+    "directories": {
+      "output": "bin"
+    },
+    "files": [
+      "dist/electron/**/*"
+    ]
+  },
+  "engines": {
+    "node": ">=8.9",
+    "yarn": ">= 1.3.2"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "webpackConfig": "webpack.renderer.log.js",
+      "dll": [
+        "bulma",
+        "vue",
+        "vue-router",
+        "vue-easytable",
+        "vuex",
+        "express"
+      ]
+    }
+  },
+  "dependencies": {
+    "archiver": "1.3.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "bulma": "^0.6.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "electron-log": "^2.2.11",
+    "electron-updater": "^4.0.6",
+    "es6-promise": "^4.2.6",
+    "express": "^4.16.2",
+    "gify-parse": "^1.0.7",
+    "html2canvas": "^1.0.0-alpha.12",
+    "iconv-lite": "^0.4.24",
+    "increase-memory-limit": "^1.0.6",
+    "jimp": "^0.6.8",
+    "js-md5": "^0.7.3",
+    "jsqr": "^1.2.0",
+    "moment": "^2.20.1",
+    "parse-json": "^4.0.0",
+    "prettier": "~1.12.0",
+    "qrcodejs2": "^0.0.2",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "sass-resources-loader": "^2.0.0",
+    "source-map-support": "^0.5.0",
+    "url-search-params-polyfill": "^6.0.0",
+    "vrv-static": "file:./vrv-static",
+    "vue": "^2.5.2",
+    "vue-electron": "^1.0.6",
+    "vue-router": "^3.0.1",
+    "vue2-datepicker": "^3.1.1",
+    "vuescroll": "^4.8.12",
+    "vuex": "^3.0.1",
+    "ws": "^5.1.0",
+    "yarn": "^1.19.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.3",
+    "@types/chai-datetime": "0.0.31",
+    "@types/electron-packager": "^10.1.0",
+    "@types/file-url": "^2.0.0",
+    "@types/fs-extra": "5.0.1",
+    "@types/mocha": "^5.0.0",
+    "@types/node": "^9.6.0",
+    "axios": "^0.15.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "cfonts": "^1.1.3",
+    "chalk": "^2.1.0",
+    "cross-env": "^5.0.5",
+    "crypto": "^1.0.1",
+    "css-loader": "^0.28.4",
+    "del": "^3.0.0",
+    "devtron": "^1.4.0",
+    "electron": "^5.0.1",
+    "electron-builder": "^20.38.4",
+    "electron-debug": "^1.4.0",
+    "electron-webpack": "^1.13.0",
+    "file-uri-to-path": "^1.0.0",
+    "file-url": "^2.0.2",
+    "ftp": "^0.3.10",
+    "jsdoc-vue": "^1.0.0",
+    "node-loader": "^0.6.0",
+    "node-notifier": "^5.1.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "vue-class-component": "^6.0.0",
+    "vue-html-loader": "^1.2.4",
+    "vue-i18n": "^7.3.2",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^3.10.0"
+  }
+}

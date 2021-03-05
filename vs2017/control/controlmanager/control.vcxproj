@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\clientsdk\include\interface\Defines.h" />
+    <ClInclude Include="..\..\clientsdk\include\interface\Exports.h" />
+    <ClInclude Include="..\..\clientsdk\include\interface\IControl.h" />
+    <ClInclude Include="..\..\clientsdk\include\interface\IControlClient.h" />
+    <ClInclude Include="..\..\clientsdk\include\interface\IEntMgrControl.h" />
+    <ClInclude Include="..\..\clientsdk\include\interface\IUserControl.h" />
+    <ClInclude Include="..\..\clientsdk\include\ServiceDefine.h" />
+    <ClInclude Include="core\ControlClient.h" />
+    <ClInclude Include="core\ControlManager.h" />
+    <ClInclude Include="core\DynamicLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\ControlClient.cpp" />
+    <ClCompile Include="core\ControlManager.cpp" />
+    <ClCompile Include="core\DynamicLib.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{89820A51-421F-401B-94ED-006AAB2BC4C7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>control</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\build_out\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build_out\tmp\$(ProjectName)\$(Configuration)\</IntDir>
+    <LibraryPath>$(SolutionDir)\sdk\pc_win\lib;$(SolutionDir)\log;$(SolutionDir)\build_out\$(Configuration);$(SolutionDir)\sdk\thirdlib\log4cplus\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\clientsdk\include\interface;$(SolutionDir)\log;$(SolutionDir)\utils;$(SolutionDir)\sdk\pc_win\include;$(IncludePath);%(AdditionalIncludeDirectories);$(SolutionDir)\clientsdk\include;$(SolutionDir)\sdk\thirdlib\log4cplus\include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\build_out\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build_out\tmp\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)\clientsdk\include\interface;$(SolutionDir)\log;$(SolutionDir)\utils;$(SolutionDir)\sdk\pc_win\include;$(IncludePath);%(AdditionalIncludeDirectories);$(SolutionDir)\clientsdk\include;$(SolutionDir)\sdk\thirdlib\log4cplus\include</IncludePath>
+    <LibraryPath>$(SolutionDir)\sdk\pc_win\lib;$(SolutionDir)\log;$(SolutionDir)\build_out\$(Configuration);$(SolutionDir)\sdk\thirdlib\log4cplus\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CONTROL_EXPORT;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\control;$(SolutionDir)\sdk\pc_win\include;$(SolutionDir)\control\include\interface;$(IncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>logd.lib;utils.lib;log4cplusSD.lib;serviced.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\sdk\pc_win\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CONTROL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\src\control;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>service.lib;log.lib;log4cplusS.lib;utils.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

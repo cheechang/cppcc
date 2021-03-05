@@ -1,0 +1,708 @@
+body,
+html,
+#app {
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: drag;
+  font-family: '微软雅黑', 'Microsoft YaHei', Arial, Helvetica, sans-serif, '宋体';
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
+  position: relative;
+}
+// input[type='file'] {
+//   color: transparent;
+// }
+/*滚动条整体部分*/
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  border-radius: $--border-radius-base;
+  background-color: #fafafa00 !important;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+
+/*滚动条两端的箭头*/
+
+::-webkit-scroll-track {
+  display: none;
+}
+
+
+/*经测试好像并不能控制什么*/
+
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+
+/*滚动条内侧部分 去掉*/
+
+::-webkit-scrollbar-thumb {
+  // background-color: #d8d8d885;
+  background-color:#ccc9c7; 
+  border-radius: $--border-radius-base;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #a8a7a7;
+  border-radius: $--border-radius-base;
+}
+
+
+
+/*滚动条中可以拖动的那部分*/
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+
+/*变角部分*/
+
+::-webkit-resizer {
+  display: none;
+}
+
+input, button{
+  font-family: '\5FAE\8F6F\96C5\9ED1', 'Microsoft YaHei', Arial, Helvetica, sans-serif, '\5B8B\4F53'
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('~vrv-static/resources/fonts/iconfont/material/iconfont.eot');
+  src: url('~vrv-static/resources/fonts/iconfont/material/iconfont.eot?#iefix') format('embedded-opentype'), url('~vrv-static/resources/fonts/iconfont/material/iconfont.woff') format('woff'), url('~vrv-static/resources/fonts/iconfont/material/iconfont.ttf') format('truetype'), url('~vrv-static/resources/fonts/iconfont/material/iconfont.svg#iconfont') format('svg');
+}
+
+.input {
+  font-family: "微软雅黑", "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
+}
+
+.icon {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-app-region: no-drag;
+}
+
+
+
+// .default-bg {
+//   // background: url('~vrv-static/images/common/default.png') 60% 40% no-repeat rgba(255, 255, 255, 0);
+//   background-size: 200px;
+// }
+
+.list-bg {
+  background: url('~vrv-static/resources/images/common/nocontent.png') 42% 10% no-repeat #fff;
+}
+.empty-list {
+  background: url('~vrv-static/resources/images/common/empty-list.png') 50% 38% no-repeat;
+}
+
+.unread-count-nav {
+  position: absolute;
+  right: -3px;
+  top: 14px;
+  @include z-index(btn);
+}
+.not-disturb-nav {
+  position: absolute;
+  right: -7px;
+  bottom: 22px;
+  color: #fff;
+  opacity: .5;
+  font-size: $--font-size-mid!important;
+}
+
+.right-success-state {
+  position: absolute;
+  right: -10px;
+  bottom: -6px;
+  font-size: 18px;
+  color: #ef6767;
+}
+
+// .left-fail-state
+.msg-fail-self {
+  // width: 20px;
+  // align-self: center;
+  // color: #ef6767;
+  // display: flex;
+  // align-items: center;
+  // position: absolute;
+  // left: -25px;
+  width: 16px;
+  align-self: center;
+  color: #ef6767;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: -19px;
+  height: 16px;
+  font-size: 14px;
+}
+
+
+
+@keyframes suerSettLoading {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.suer-sett-loading {
+  color: green;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  .icon{
+    height: 16px;
+  }
+  .loading-start {
+    font-size: 16px;
+    color: red;
+    animation: suerSettLoading 0.7s linear infinite;
+    transform-origin: 8px 7px;
+  }
+  .loading-success{
+    height:16px;
+    width: 16px;
+  }
+}
+
+
+// 表格样式配置
+.v-table-header-inner{
+  width: 0!important;
+}
+.content table td, .content table th {
+    border: 0!important;
+    padding: 0 0!important;
+}
+.title-cell-class1{
+  background: rgba(237, 247, 255, 0.54) !important
+}
+.title-cell-class2{
+  background: #323a7b;
+  color: #fff;
+}
+.v-scrollbar-wrap::-webkit-scrollbar{
+  display: none
+}
+.v-table-class{
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.v-table-row{
+  cursor: pointer;
+}
+.input:focus{
+  box-shadow: none!important;
+}
+.is-dood-drag{
+  -webkit-app-region: no-drag;
+}
+
+.dood-button-by{
+  background: #0a63f1!important;
+  &:hover {
+    background: #0956d3!important;
+  }
+}
+
+.v-ripple {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+  }
+  &:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+  }
+}
+
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.66);
+}
+
+
+
+
+/* 模块布局 */ 
+.model-container-layout {
+  width: 100%;
+  //height: calc(100% - 55px);
+  height: 100%;
+  display: flex;
+  background: url('~vrv-static/resources/images/common/default_bg.png') 60% 40% no-repeat;
+  background-size: 160px;
+  .model-container-left {
+    width: 226px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // z-index: 1;
+  }
+  .model-container-right {
+    flex: 1;
+    padding: 10px;
+    position: relative;
+    background: #fff;
+    border-radius: $--border-radius-base;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.file-noice {
+  font-size: 30px;
+  margin: 13px;
+  color: $--color-msg-prompt-danger;
+}
+/* *********************************mini窗口******************************************** */
+/* screen <= 601 */
+@media screen and (max-width: 601px) {
+  /* 消息气泡 */
+  .v-message {
+    .medias {
+      margin-right: 0px !important;
+    }
+    .msg-select-item {
+      right: 40px !important;
+    }
+  }
+  .title-area {
+    .chat-name {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 75px;
+    }
+  }
+  /* 个人会话设置页 */
+  .chat-config {
+    position: absolute;
+    right: 0;
+  }
+  /* 系统消息 */
+  .system-container {
+    width: 300px;
+  }
+  /* 组合消息气泡 */
+  .type-mix-text {
+    .text-tip {
+      max-width: 160px !important;
+    }
+  }
+  /* 模板消息气泡 */
+  .type-template {
+    width: 260px !important;
+  }
+  /* 联系人公众号详情页 */
+  .official-accounts {
+    .item-avatar {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+  /* 群文件 */
+  .chat-group-file {
+    .item-download {
+      display: none;
+    }
+  }
+  /* 群成员（鼠标划过时的卡片） */
+  .chat-group-info {
+    position: absolute;
+    right: 0;
+    height: calc(100% - 42px) !important;
+    .group-card-info {
+      display: none !important;
+    }
+  }
+  /* 创建群/邀请群成员 */
+  .pc-create-group-info {
+    .modal-card {
+      width: 360px !important;
+      .create-group-right {
+        width: 180px !important;
+      }
+      .create-group-left {
+        width: 180px !important;
+      }
+    }
+  }
+  /* 应用列表--更多应用 */
+  .app-item {
+    .left {
+      flex: 1;
+      .app-description {
+        flex: 1;
+      }
+    }
+  }
+  /* 导航栏 */
+  .dood-navbar {
+    .group-menu {
+      display: none;
+    }
+    .navbar-right {
+      width: 100px !important;
+      visibility: hidden;
+      padding-right: 0 !important;
+    }
+    .navbar-left {
+      width: inherit !important;
+    }
+  }
+}
+
+/* screen <= 914 */
+@media screen and (max-width: 914px) {
+  /* 最近会话列表 */
+  .chat-list {
+    width: 180px !important;
+    .chatlist-time {
+      display: none !important;
+    }
+    .subtitle {
+      margin-top: -34px !important;
+      .msg-fail-notify,
+      .notice-at-me,
+      .contents {
+        display: none !important;
+      }
+      .chatlist-subscript {
+        margin-top: -4px !important;
+      }
+    }
+    .card-content {
+      width: 173px !important;
+    }
+    .title {
+      margin-bottom: 0px !important;
+    }
+  }
+  /* 群文件 */
+  .chat-group-file {
+    width: calc(100vw - 204px) !important;
+    .group-file {
+      min-width: calc(100vw - 204px) !important;
+    }
+    .is-loading {
+      width: calc(100vw - 204px) !important;
+    }
+  }
+}
+
+/* screen <= 801 */
+@media screen and (max-width: 801px) {
+  /* 最近会话列表 */
+  .chat-list {
+    width: 65px !important;
+    .title {
+      display: none !important;
+    }
+    .chatlist-subscript {
+      margin-top: 2px !important;
+    }
+    .media-left {
+      margin-right: 0px !important;
+    }
+    .card-content {
+      width: 65px !important;
+    }
+  }
+  /* 联系人/群/组织架构列表 */
+  .contact-list {
+    width: 65px !important;
+    .contact-tab {
+      display: none !important;
+      .login-from-disconnection {
+        display: none !important;
+      }
+    }
+    .tab-content {
+      height: 100%;
+    }
+    .sup-title {
+      display: none !important;
+    }
+    .hidden-vip-item {
+      display: none !important;
+    }
+    .organization-tab-item {
+      height: 100% !important;
+      ul {
+        margin: 0px !important;
+      }
+      .node-li {
+        padding: 0px;
+        height: 100%;
+        .node-item {
+          display: none !important;
+        }
+        ul {
+          padding: 0px;
+        }
+        .item-user-name  {
+          height: 3.9rem !important;
+          .default-content {
+            height: 3.9rem !important;
+          }
+          .item-user-avatar {
+            width: 40px !important;
+            height: 40px !important;
+          }
+        }
+      }
+      .defalut-page {
+        background: none !important;
+      }
+    }
+  }
+  /* 群文件 */
+  .chat-group-file {
+    width: calc(100vw - 89px) !important;
+    .group-file {
+      min-width: calc(100vw - 89px) !important;
+    }
+    .is-loading {
+      width: calc(100vw - 89px) !important;
+    }
+  }
+  /* 应用列表 */
+  .app-list {
+    width: 65px !important;
+  }
+}
+/* *********************************mini窗口******************************************** */
+
+/* 弱提示 */ 
+.type-tip-msg {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+  .tip-body {
+    display: flex;
+    align-items: center;
+    background: get-grey-color(lighten-2);
+    border-radius: $--border-radius-large;
+    padding: 0px 10px;
+    font-size: $--font-size-small;
+    .icon-tip-msg {
+      display: flex;
+      align-items: center;
+      margin-right: 4px;
+    }
+  }
+}
+
+/* 分割线-盒子之前 */
+.cutting-line-before{
+  &::before{
+    content: ' ';
+    display: block;
+    background: #dbdbdb;
+    height: 1px;
+    margin: 10px 0;
+  }
+}
+/* 分割线-盒子之后 */
+.cutting-line-after{
+  &::after{
+    content: ' ';
+    display: block;
+    background: #dbdbdb;
+    height: 1px;
+    margin: 10px 0;
+  }
+}
+
+/* 毛玻璃效果 */
+.theme-frosted-glass {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  filter: blur(10px);
+  @include theme_image(#fff);
+  background-attachment: fixed!important;
+  transition: 0.7s;
+}
+
+/* 左侧列表条目选中、鼠标滑过后样式 */
+.theme-list-items-active{
+  @include bg_color($--color-active, 'active')
+}
+.theme-list-items .title{
+  @include font_color($--color-text-light, 'light');
+}
+.theme-list-items .title .chatlist-time, .subtitle{
+  @include font_color($--color-text-lighter, 'lighter');
+}
+.theme-list-items:hover{
+  @include bg_color($--color-hover, 'hover');
+  cursor: default;
+}
+.theme-left-bgc{
+  height: 100%;
+  @include bg_color($--color-transparency-large, 'transparency50');
+}
+
+.theme-work-bgc{
+  height: 100%;
+  @include theme_image($--background-img-primary1);
+}
+
+.theme-left-txt{
+  @include font_color($--color-text-light, 'light');
+}
+.theme-hover-bgc_font:hover{
+  @include bg_color($--color-primary, 'normal');
+  color: $--color-text-bg;
+}
+/* 主题按钮 */
+.theme-botton{
+  @include bg_color($--color-primary, 'normal');
+  color: $--color-text-bg;
+}
+.theme-bgc_font{
+  @include bg_color($--color-primary, 'normal');
+  color: $--color-text-bg;
+}
+.theme-left-splitBar{
+  @include bg_color($--color-transparency-small, 'transparency30');
+  @include font_color(#4a4a4a, 'theme');
+}
+.theme-list-items-son-active{
+  @include bg_color($--color-child-item-active, 'child-active');
+}
+
+/* 主题背景图 */
+.theme-bg-box {
+  position: absolute;
+  top: 0;
+  // z-index: -1;
+  @include z-index(negative);
+  width: 100%;
+  height: 100%;
+  @include theme_image(#fff);
+}
+
+.theme-mark-bg-box {
+  position: absolute;
+  top: 0;
+  // z-index: -1;
+  @include z-index(negative);
+  width: 100%;
+  height: 100%;
+  @include theme_mark_image(#fff);
+}
+
+
+/* table主题样式 */
+.theme-table.theme-left-bgc .tabs li a{
+  @include font_color($--color-text-light, 'light');
+}
+/* table选中样式 */
+.theme-table .tabs li.is-active a{
+  @include font_color($--color-primary, 'theme');
+  border-bottom-color: inherit
+}
+/* table鼠标滑过主题样式 */
+.theme-table .tabs li a:hover{
+  @include font_color($--color-light, 'themelight');
+  border-bottom-color: inherit
+}
+
+.btn-disable {
+  color: get-grey-color(lighten-1);
+  &:hover {
+    background: $--color-white;
+    color: get-grey-color(lighten-1);
+  }
+}
+
+/* 忘记密码登录显示提示红点 */
+.forget-pwd-tip{
+  position: absolute;
+  background: red;
+  height: 7px;
+  width: 7px;
+  border-radius: $--border-radius-circle
+}
+
+.v-ripple__container {
+  color: inherit;
+  border-radius: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  contain: strict;
+}
+.v-ripple__animation {
+  color: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: radial-gradient(#fff, transparent);
+  // background: currentColor;
+  opacity: 0;
+  transition: .5s cubic-bezier(0, 0, 0.2, 1);
+  pointer-events: none;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+.v-ripple__animation--enter {
+  transition: none;
+}
+.v-ripple__animation--visible {
+  opacity: 0.15;
+}
+
+.app-border {
+  border: .1px solid #ccc;
+}
+//fit xp
+.search-input {
+  .search-icon {
+    left: 0;
+  }
+}

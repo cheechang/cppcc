@@ -1,0 +1,67 @@
+.label {
+  font-weight: $weight-semibold
+}
+
+.field {
+  &.is-grouped {
+    .field {
+      flex-shrink: 0;
+      &+.field {
+        margin-left: 0.75rem;
+      }
+      &.is-expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+  } // Nested control addons (for Autocomplete and Datepicker)
+  &.has-addons .control {
+    &:first-child .control {
+      .button,
+      .input,
+      .select select {
+        border-bottom-left-radius: $input-radius;
+        border-top-left-radius: $input-radius;
+      }
+    }
+    &:last-child .control {
+      .button,
+      .input,
+      .select select {
+        border-bottom-right-radius: $input-radius;
+        border-top-right-radius: $input-radius;
+      }
+    }
+    .control {
+      .button,
+      .input,
+      .select select {
+        border-radius: $--border-radius-none
+      }
+    }
+  }
+}
+
+.control {
+  .help.counter {
+    float: right;
+    margin-left: 0.5em;
+  }
+  .icon {
+    &.is-clickable {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+  }
+  .is-right {
+    height: 100% !important;
+  }
+  .is-border {
+    background: none;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    max-height: 2.25rem;
+    height: -webkit-fill-available;
+    color: #fff;
+  }
+}

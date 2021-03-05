@@ -1,0 +1,10 @@
+#define APP_VERSION_NUM "3.1.2" 
+#define APP_PRODUCTVERSION_NUM "v3.1.2" 
+#define APP_PRODUCTNAME "Linkdood_V3.1.2" 
+#define APP_MARK "inet" 
+#define APP_SERVER_MINIVER "1" 
+#define APP_SERVER_ADVVER  "1" 
+#define APP_WIN_VER1 0 
+#define APP_WIN_VER2 3 
+#define APP_WIN_VER3 1 
+#define APP_WIN_VER4 2 

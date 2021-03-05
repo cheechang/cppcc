@@ -1,0 +1,27 @@
+@import '../mixins/ellipsis.scss';
+$class-prefix: 'd-option';
+.#{$class-prefix} {
+  &{
+    @include ellipsis($display: block);
+    cursor: pointer;
+    font-size: inherit;
+    padding: 6px 18px 6px 12px;
+    line-height: 1.5;
+    transition: background .3s;
+    box-sizing: border-box;
+    // &:not(.#{$class-prefix}-disabled):hover{
+    //   background: #ECF2FC;
+    // }
+    &-hover{
+      background: #ECF2FC!important;
+    }
+    &-selected{
+      font-weight: bold;
+      background: #F7F7F7;
+    }
+    &-disabled{
+      color: #C0C4CC;
+      cursor: not-allowed!important;
+    }
+  }
+}

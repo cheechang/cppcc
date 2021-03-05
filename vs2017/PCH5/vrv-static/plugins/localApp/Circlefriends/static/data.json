@@ -1,0 +1,272 @@
+{
+  "getNoteCb": {
+    "code": 0,
+    "infos": [{
+        "content": {
+          "body": "www.baidu.com"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "7",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "lixin",
+        "lastChgTime": "1534148550666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4330037907",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 5
+      },
+      {
+        "content": {
+          "body": "1231231"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "5",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "lixin-testtest",
+        "lastChgTime": "1534148537666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328635089",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 1
+      },
+      {
+        "content": {
+          "encryptKey": "06ecrh1p5znlq9h4",
+          "fileName": "vimsdk.node",
+          "fileSize": 1081856,
+          "fileUrl": "at013/0/grochatfile/20180813/1455/a_jvqu_4d3d000007fc085c.node"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "4",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "vimsdk.node李鑫",
+        "lastChgTime": "1534148529666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328627864",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 6
+      },
+      {
+        "content": {
+          "encryptKey": "06ecrh1p5znlq9h4",
+          "fileName": "vimsdk.node",
+          "fileSize": 1081856,
+          "fileUrl": "at013/0/grochatfile/20180813/1455/a_jvqu_4d3d000007fc085c.node"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "3",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "vimsdk.node李鑫",
+        "lastChgTime": "1534148527666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328627864",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 4
+      },
+      {
+        "content": {
+          "encryptKey": "06ecrh1p5znlq9h4",
+          "fileName": "vimsdk.node",
+          "fileSize": 1081856,
+          "fileUrl": "at013/0/grochatfile/20180813/1455/a_jvqu_4d3d000007fc085c.node"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "2",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "vimsdk.node李鑫",
+        "lastChgTime": "1534148527666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328627864",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 3
+      },
+      {
+        "content": {
+          "encryptKey": "ka26sszfl27pktnv",
+          "fileName": "http://www.vrv.com.cn/uploadfile/2016/0328/20160328053642572.jpg",
+          "mainUrl": "http://www.vrv.com.cn/uploadfile/2016/0328/20160328053642572.jpg",
+          "thumbUrl": "http://www.vrv.com.cn/uploadfile/2016/0328/20160328053642572.jpg"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "1",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "李鑫",
+        "lastChgTime": "1534148525666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328627864",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 2
+      }
+    ]
+  },
+  "addNoteCb": {
+    "code": 0
+  },
+  "delNoteCb": {
+    "code": 0
+  },
+  "editNoteCb": {
+    "code": 0
+  },
+  "archiveNoteCb": {
+    "code": 0
+  },
+  "topNoteCb": {
+    "code": 0
+  },
+  "getUserInfoCb": {
+    "users": [{
+      "code": 0,
+      "users": {
+        "accounts": [],
+        "acountName": "lixin-vrv/vrv",
+        "area": "",
+        "avatar": "",
+        "avatarUrl": "",
+        "birthday": 738259200000,
+        "chatImg": "",
+        "disturbSet": 0,
+        "emails": ["742020900@qq.com"],
+        "phones": ["008618710372423"],
+        "extends": "",
+        "gender": 1,
+        "id": "4328627864",
+        "isApp": 0,
+        "isHidden": 0,
+        "isStar": 0,
+        "isTop": false,
+        "name": "李鑫",
+        "pinyin": "",
+        "privateMsgPwd": "",
+        "remark": "",
+        "server": "",
+        "sign": "可以看到我的签名吗",
+        "thumbAvatar": "C:/Users/admin/AppData/Local/Linkdood/public/head/hd3_0_head_20180726_1610_tiny_xAP1_026800001df8085c.jpg",
+        "thumbAvatarUrl": "hd3/0/head/20180726/1610/tiny_xAP1_026800001df8085c.jpg",
+        "timeZone": 0
+      }
+    }]
+  },
+  "searchNoteCB": {
+    "code": 0,
+    "infos": [{
+        "content": {
+          "encryptKey": "06ecrh1p5znlq9h4",
+          "fileName": "vimsdk.node",
+          "fileSize": 1081856,
+          "fileUrl": "at013/0/grochatfile/20180813/1455/a_jvqu_4d3d000007fc085c.node"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "3",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "vimsdk.node李鑫",
+        "lastChgTime": "1534148529666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328627864",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 6
+      },
+      {
+        "content": {
+          "encryptKey": "06ecrh1p5znlq9h4",
+          "fileName": "vimsdk.node",
+          "fileSize": 1081856,
+          "fileUrl": "at013/0/grochatfile/20180813/1455/a_jvqu_4d3d000007fc085c.node"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "2",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "vimsdk.node李鑫",
+        "lastChgTime": "1534148527666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328627864",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 6
+      },
+      {
+        "content": {
+          "encryptKey": "ka26sszfl27pktnv",
+          "fileName": "http://www.vrv.com.cn/uploadfile/2016/0317/20160317050546378.jpg",
+          "mainUrl": "http://www.vrv.com.cn/uploadfile/2016/0317/20160317050546378.jpg",
+          "thumbUrl": "http://www.vrv.com.cn/uploadfile/2016/0317/20160317050546378.jpg"
+        },
+        "exts": "",
+        "fileName": "",
+        "id": "1",
+        "isArchive": 0,
+        "isNet": false,
+        "isReminder": 0,
+        "key": "李鑫",
+        "lastChgTime": "1534148525666",
+        "loginInfo": "",
+        "msgProperties": "",
+        "netType": 0,
+        "rmdTime": "0",
+        "sendUserId": "4328627864",
+        "targetId": "4336935131",
+        "title": "",
+        "type": 2
+      }
+    ]
+  },
+  "searchNoteKongCB": {
+    "code": 0,
+    "infos": []
+  }
+}

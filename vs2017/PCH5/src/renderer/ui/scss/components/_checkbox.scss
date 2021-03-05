@@ -1,0 +1,67 @@
+.v-checkbox {
+  user-select: none;
+  display: inline-block;
+  .v-checkbox-label {
+    font-size: 14px;
+    cursor: pointer;
+    input {
+      margin-right: 6px;
+      display: none;
+    }
+    .v-checkbox-inner {
+      display: inline-block;
+      position: relative;
+      border: $checkbox-border;
+      // @include border($--color-primary, 1px, border);
+      border-radius: $--border-radius-base;
+      background: #fff;
+      box-sizing: border-box;
+      width: 18px;
+      height: 18px;
+      z-index: 1;
+      transition: border-color .25s cubic-bezier(.71, -.46, .29, 1.46), background-color .25s cubic-bezier(.71, -.46, .29, 1.46);
+      top: 3px;
+      &:hover {
+        // border-color: $--color-primary;
+        @include border($--color-primary, 1px, border);
+      }
+    }
+    .is-checked {
+      @include bg_color($--color-primary, 'normal');
+      @include border($--color-primary, 1px, border);
+      &:after {
+        transform: rotate(45deg) scaleY(1);
+        box-sizing: content-box;
+        content: "";
+        border: 2px solid #fff;
+        border-left: 0;
+        border-top: 0;
+        height: 8px;
+        left: 5px;
+        position: absolute;
+        top: 1px;
+        width: 4px;
+      }
+    }
+    .is-indeterminate {
+      @include bg_color($--color-primary, 'normal');
+      border-color: $--color-primary;
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        border: 1px solid #fff;
+        margin-top: -1px;
+        left: 3px;
+        right: 3px;
+        top: 50%;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    .is-disabled {
+      cursor: not-allowed;
+    }
+  }
+}

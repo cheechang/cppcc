@@ -1,0 +1,141 @@
+/* 获取灰色 */
+@function get-grey-color($key) {
+  @return map-get($--color-grey, $key)
+};
+
+@mixin get-grey-color($key) {
+  color: get-grey-color($key);
+};
+
+/* 获取蓝色 */
+@function get-blue-color($key) {
+  @return map-get($--color-blue, $key)
+};
+
+@mixin get-blue-color($key) {
+  color: get-blue-color($key);
+};
+
+/* 获取z-Index */
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+/* 提取省略号 */
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 提取所有的背景颜色 */
+@mixin bg_color($background, $type) { /*通过该函数设置字体颜色，后期方便统一管理 $--color-text-light ；*/
+  background:$background;
+  @each $key, $value in map-get($background-color-type, $type) {
+    [data-theme = #{$key}] & {
+      background:$value;
+    }
+  }
+}
+
+/* 工作台模块中提取所有的背景颜色 */
+@mixin work_bg_color($background, $type) {
+  /* 三目运算，如果是默认主题下左侧列表的颜色时，此时工作台处应为纯白色 */
+  background: if($background==#ebebeb !important, #fff, $background);
+  @each $key, $value in map-get($background-color-type, $type) {
+    [data-theme = #{$key}] & {
+      background:$value;
+    }
+  }
+}
+
+
+/* 提取所有的字体颜色 */
+@mixin font_color($color, $type) { /*通过该函数设置字体颜色，后期方便统一管理 $--color-text-light ；*/
+	color:$color; 
+  @each $key, $value in map-get($font_color_type, $type) {
+    [data-theme = #{$key}] & {
+      color:$value;
+    }
+  }
+}
+
+/* 获取主题图片 */
+@mixin theme_image($url) {
+  // background: url($url)  $--background-img-repeat;
+  background: if($url==#fff, $url, url($url)  $--background-img-repeat);
+  background-size: $--background-img-size;
+  @each $key, $value in $theme_image_map {
+    [data-theme= #{$key}] & {
+      background: $value;
+      background-size: $--background-img-size;
+    }
+  }
+}
+
+/* 获取水印主题图片 */
+@mixin theme_mark_image($url) {
+  // background: url($url)  $--background-img-repeat;
+  background: if($url==#fff, $url, url($url)  $--background-img-repeat);
+  background-size: $--background-img-size;
+  @each $key, $value in $theme_mark_image_map {
+    [data-theme= #{$key}] & {
+      background: $value;
+      background-size: $--background-img-size;
+    }
+  }
+}
+
+/* 提取所有的背景颜色 */
+@mixin navbar_bgs($background) { /*通过该函数设置字体颜色，后期方便统一管理 $--color-text-light ；*/
+  background:$background; 
+  @each $key, $value in $navbar_bg_map {
+    [data-theme = #{$key}] & {
+      background:$value;
+    }
+  }
+}
+
+/* 边框 */
+@mixin border($borderColor, $size, $borderDirection) {
+	#{$borderDirection}: solid $size $borderColor;
+  @each $key, $value in $bg_color_map {
+    [data-theme = #{$key}] & {
+      #{$borderDirection}: solid $size $value;
+    }
+  }
+}
+
+/* 工作台特殊边框颜色 */
+@mixin work-input-border($color, $type) { /*通过该函数设置字体颜色，后期方便统一管理 $--color-text-light ；*/
+	border: 1px solid $color; 
+  @each $key, $value in map-get($font_color_type, $type) {
+    [data-theme = #{$key}] & {
+      border: 1px solid $value; 
+    }
+  }
+}
+
+/* 工作台特殊字体颜色 */
+@mixin work_font_color($color, $type) { /*通过该函数设置字体颜色，后期方便统一管理 $--color-text-light ；*/
+	color:$color; 
+  @each $key, $value in map-get($font_color_type, $type) {
+    [data-theme = #{$key}] & {
+      color:$value;
+    }
+  }
+}
+
+/* flex-height 低版本浏览器兼容*/
+@mixin flexh{
+  flex: 1;
+  -webkit-flex: 1;
+  flex-direction: column;
+}

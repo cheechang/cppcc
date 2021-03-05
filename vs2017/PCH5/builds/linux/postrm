@@ -1,0 +1,18 @@
+#!/bin/bash
+
+loginNames=`who | awk '{print $1}' | uniq`
+for loginName in $loginNames
+do
+  echo "the loginName [ $loginName ]"
+  homeDir=`cat /etc/passwd | grep $loginName | awk -F: '{print $6}'`
+
+  zhDesktop=$homeDir/桌面/Linkdood.desktop
+  chDesktop=$homeDir/Desktop/Linkdood.desktop
+  if [ -f "$zhDesktop" ]; then
+      rm $zhDesktop
+  fi 
+
+  if [ -f "$chDesktop" ]; then
+      rm $chDesktop
+  fi 
+done

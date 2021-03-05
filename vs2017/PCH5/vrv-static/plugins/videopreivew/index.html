@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <title>视频查看器</title> -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #video {
+      width: 320px;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin: auto;
+      /* z-index: 9999; */
+    }
+  </style>
+</head>
+<script src="video.js"></script>
+
+<body style="background: transparent; -webkit-app-region: drag">
+  <video id="video" controls autoplay onclick="handlePlay()"></video>
+  <!-- <div class="play-btn" onclick="play()"></div> -->
+  <div class="down-btn" onclick="saveAs()"></div>
+  <svg class="video-process-rate" height="150" width="110">
+    <circle cx="55" cy="55" r="20" fill="none" stroke="#ccc" stroke-width="4" stroke-linecap="round"/>
+    <circle class="process-rate" id="outer-process" cx="55" cy="55" r="20" fill="none" transform="matrix(0,-1,1,0,0,110)" stroke="#00A5E0" stroke-width="4" stroke-dasharray="0,10000"/>
+  </svg>
+
+  <script>
+    const remote = window.require('electron').remote;
+    const service = remote.getGlobal('service');
+    const ipcRenderer = window.require('electron').ipcRenderer
+    const fs = require('fs')
+    const Status = {
+      autoplay: 'autoplay',
+      needDown: 'download',
+      needDecrypt: 'decrypt'
+    }
+    window.addEventListener('DOMContentLoaded', function() {
+
+      const searchParams = new URLSearchParams(document.location.search)
+
+      var preImage = searchParams.get("preImage") // 预览图 海报
+
+      var videoStatus = searchParams.get("videoStatus") // 视频状态是否需要下载、解密
+
+      var isMute = searchParams.get("isMute")
+      var fileName = searchParams.get("fileName")
+      const videoNode = document.getElementById('video')
+      // const playBtn = document.querySelector('.play-btn')
+      // videoNode.muted = isMute === 'true' ? true : false
+      videoNode.muted = true
+
+      // 视频的海报
+      videoNode.poster = preImage;
+      videoNode.alt = fileName
+      /**
+       * videoStatus autoplay    文件已存在自动播放
+       * videoStatus needDown    文件需要下载
+       * videoStatus needDecrypt 文件需要解密
+       */
+      if (videoStatus === Status.autoplay) { 
+        var sourcePath = searchParams.get("videoPath")
+        service.log(`video autoplay ::::  ${sourcePath}`)
+        videoNode.src = sourcePath
+      } else {
+        var encryptKey = searchParams.get("enc_dec_key")
+        var encryPath  = searchParams.get("encryPath")
+        var videoPath = searchParams.get("user_videoPath")
+        
+        if (videoStatus === Status.needDown) {
+          var targetId = searchParams.get("targetId"),
+              url = searchParams.get("mediaUrl"),
+              msgId = searchParams.get("msgId"),
+              fromId = searchParams.get("fromId")
+
+          console.log(targetId, msgId, fromId, encryPath, encryptKey, url)
+
+          downLoadFile(targetId, msgId, fromId, encryPath, encryptKey, url, fileName).then(res => {
+            service.log(`video downLoad code::::  ${res.code}`)
+            if (res.code === 0) {
+              let destPath = createCachePath(videoPath, fileName)
+              decrypted(encryptKey, encryPath, destPath).then(res => {
+                console.log('decrypted', res)
+                if (res.result) {
+                 videoNode.src = destPath
+                } else {
+                  service.log(`video decrypted fail::::`)
+                }
+              })
+            } else {
+              service.log(`video downLoad fail::::  ${res.code}`)
+            }
+          })
+        } else if (videoStatus === Status.needDecrypt) {
+          let destPath = createCachePath(videoPath, fileName)
+          decrypted(encryptKey, encryPath, destPath).then(decryptedrRes => {
+            console.log('decrypted', decryptedrRes)
+            if (decryptedrRes.result) {
+              videoNode.src = destPath
+              console.log('videoNode', videoNode)
+            } else {
+              service.log(`video decrypted fail::::`)
+            }
+          })
+        }
+      }
+      videoNode.onloadeddata = () => {
+        console.log('onload>>>>>>>>>>>')
+        const downNode = document.getElementsByClassName('down-btn')[0]
+        downNode.style.display = 'block'
+      }
+      ipcRenderer.on('handleVideo', (e, args) => {
+        console.log('handleVideo>>>')
+        setTimeout(() => {window.close();}, 500);
+      })
+    })
+
+  </script>
+  <style>
+    .play-btn{
+      background: url('../../resources/images/message/play.svg') no-repeat;
+      background-size: 100%;
+      background-position-x: 5px;
+      background-position-y: 4px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin: auto;
+      z-index: 9999;
+      width: 100px;
+      height: 100px;
+      display: none;
+    }
+
+    .video-process-rate{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin: auto;
+      display: none;
+    }
+    .down-btn { 
+      width: 32px;
+      height: 32px;
+      background: url('../../resources/images/message/download.svg') no-repeat;
+      z-index: 1;
+      position: absolute;
+      right: 6px;
+      top: 4px;
+      /* border: solid 1px red; */
+      background-size: 70%;
+      background-position-x: 5px;
+      background-position-y: 4px;
+      display: none;
+    }
+    .down-btn:hover {
+      cursor: pointer;
+    }
+  </style>
+
+</body>
+
+</html>

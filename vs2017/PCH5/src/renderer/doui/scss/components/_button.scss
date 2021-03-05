@@ -1,0 +1,323 @@
+
+.d-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color: map-get($--color-grey, base);
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased; 
+  letter-spacing: .8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  user-select: none;
+  border-radius: $--border-radius-base;
+  // transition: all .3s ease-out;
+}
+/**
+ * 形状
+ */
+.d-button-circle {
+  border-radius: $--border-radius-circle;
+}
+
+/**
+ * 大小
+ */
+.d-button-size-normal {
+  height: $--button-size-normal-height;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  // line-height: 1;
+  font-size: $--font-size-normal;
+}
+.d-button-size-medium {
+  height: $--button-size-medium-height;
+  padding: 10px 20px;
+  line-height: 1;
+  font-size: $--font-size-normal;
+}
+.d-button-size-small {
+  height: $--button-size-small-height;
+  padding: 0px 15px;
+  line-height: 1;
+  font-size: $--font-size-small;
+}
+.d-button-size-mini:not(.d-button-text) {
+  height: $--button-size-mini-height;
+  padding: 0px 15px;
+  line-height: 1;
+  font-size: $--font-size-small;
+}
+
+// 绿色
+.d-button-success {
+  color: $--color-white;
+  background: $--color-success;
+  &:focus {
+    opacity: 0.8;
+  }
+  &:hover:not(.d-disabled) {
+    opacity: 0.8;
+  }
+  &:active:not(.d-disabled) {
+    opacity: 1;
+  }
+  &.d-button-outline{
+    background-color: $--color-white!important;
+    color: $--color-success;
+    border: 1px solid $--color-success;
+    &:hover,
+    &:focus {
+     border: 1px solid $--color-white!important;
+     background-color: $--color-success!important;
+     color: $--color-white;
+    }
+  }
+
+}
+// 深蓝色
+.d-button-primary {
+  color: $--color-white;
+  background-color: $--color-primary;
+  &:focus {
+    opacity: 0.8;
+  }
+  &:hover:not(.d-disabled) {
+    opacity: 0.8;
+  }
+  &:active:not(.d-disabled) {
+    opacity: 1;
+  }
+  &.d-button-outline{
+    background-color: $--color-white!important;
+    color: $--color-primary;
+    border: 1px solid $--color-primary;
+    &:hover,
+    &:focus {
+     border: 1px solid $--color-white!important;
+     background-color: $--color-primary!important;
+     color: $--color-white;
+    }
+  }
+ 
+}
+// 浅蓝色
+.d-button-info {
+  color: $--color-white;
+  background: $--color-info;
+  &:focus {
+    opacity: 0.8;
+  }
+  &:hover:not(.d-disabled) {
+    opacity: 0.8;
+  }
+  &:active:not(.d-disabled) {
+    opacity: 1;
+  }
+  &.d-button-outline{
+    background-color: $--color-white!important;
+    color: $--color-info;
+    border: 1px solid $--color-info;
+    &:hover,
+    &:focus {
+     border: 1px solid $--color-white!important;
+     background-color: $--color-info!important;
+     color: $--color-white;
+    }
+  }
+}
+// 红色
+.d-button-danger {
+  color: $--color-white;
+  background: $--color-danger;
+  &:focus {
+    opacity: 0.7;
+  }
+  &:hover:not(.d-disabled) {
+    opacity: 0.8;
+  }
+  &:active:not(.d-disabled) {
+    opacity: 1;
+  }
+  &.d-button-outline{
+    background-color: $--color-white!important;
+    color: $--color-danger;
+    border: 1px solid $--color-danger;
+    &:hover,
+    &:focus {
+     border: 1px solid $--color-white!important;
+     background-color: $--color-danger!important;
+     color: $--color-white;
+    }
+  }
+
+}
+// 黄色
+.d-button-warning {
+  color: $--color-white;
+  background: $--color-warning;
+  transition-property: box-shadow, transform, opacity;
+  &:focus {
+    opacity: 0.8;
+  }
+  &:hover:not(.d-disabled) {
+    opacity: 0.8;
+  }
+  &:active:not(.d-disabled) {
+    opacity: 1;
+  }
+  &.d-button-outline{
+    background-color: $--color-white!important;
+    color: $--color-warning;
+    border: 1px solid $--color-warning;
+    &:hover,
+    &:focus {
+     border: 1px solid $--color-white!important;
+     background-color: $--color-warning!important;
+     color: $--color-white;
+    }
+  }
+}
+
+// 禁用
+.d-disabled {
+  cursor: not-allowed !important;
+  // pointer-events: none; 
+  opacity: 0.6;
+}
+
+// 边框按钮
+.d-button-outline-primary{
+  background: $--color-white;
+  color: $--color-primary;
+  border: 1px solid $--color-primary;
+  &:hover,
+  &:focus {
+    border: 1px solid $--color-primary!important;
+    background: $--color-primary !important;
+    color: $--color-white!important;
+  }
+}
+
+
+.d-button-outline-info{
+  background: $--color-white;
+  color: $--color-info;
+  border: 1px solid $--color-info;
+     &:hover,
+     &:focus {
+      border: 1px solid $--color-info;
+      background: $--color-info;
+      color: $--color-white;
+   }
+}
+
+.d-button-outline-success{
+  background: $--color-white;
+  color: $--color-success;
+  border: 1px solid $--color-success;
+     &:hover,
+     &:focus {
+      border: 1px solid $--color-success;
+      background: $--color-success;
+      color: $--color-white;
+   }
+}
+
+.d-button-outline-warning{
+  background: $--color-white;
+  color: $--color-warning;
+  border: 1px solid $--color-warning;
+     &:hover,
+     &:focus {
+      border: 1px solid $--color-warning;
+      background: $--color-warning;
+      color: $--color-white;
+   }
+}
+
+.d-button-outline-danger{
+  background: $--color-white;
+  color: $--color-danger;
+  border: 1px solid $--color-danger;
+     &:hover,
+     &:focus {
+      border: 1px solid $--color-danger;
+      background: $--color-danger;
+      color: $--color-white;
+   }
+}
+
+// 圆角
+.d-button-round{
+  border-radius: 20px;
+}
+
+// 圆形
+.d-button-circle{
+  border-radius: 50%;
+  width: $--button-size-normal-height;
+  padding:0px;
+}
+
+// 加载中动画
+.d-loading{
+  animation: whirling 500ms linear infinite;
+  transform-origin: center;
+  padding: 0px 5px;
+  pointer-events: none !important;
+}
+
+@keyframes whirling {
+  from  {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+// 增加button阴影
+.d-button-shadow {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 3px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+  // &:hover {
+  //   text-decoration: none;
+  //   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+  // }
+  // &:focus {
+  //   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+  // }
+}
+
+// 文字按钮样式
+.d-button-text {
+  border-color: transparent;
+  color: #409EFF;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:hover,
+  &:focus:not(.d-disabled) {
+    color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &:active:not(.d-disabled) {
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &.d-disabled,
+  &.d-disabled:hover,
+  &.d-disabled:focus {
+    border-color: transparent;
+  }
+}

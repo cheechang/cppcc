@@ -1,0 +1,99 @@
+<RCC>
+    <qresource prefix="/img">
+        <file alias="default">img/default.png</file>
+		<file alias="default_head">img/default_head.png</file>
+        <file alias="logo">img/logo.png</file>
+        <file alias="min">img/min.png</file>
+        <file alias="min-hover">img/min-hover.png</file>
+        <file alias="min-pressed">img/min-hover.png</file>
+        <file alias="max">img/max.png</file>
+        <file alias="max-hover">img/max-hover.png</file>
+        <file alias="max-pressed">img/max-hover.png</file>
+        <file alias="close">img/close.png</file>
+        <file alias="close-hover">img/close-hover.png</file>
+        <file alias="close-pressed">img/close-hover.png</file>
+        <file alias="restore">img/restore.png</file>
+        <file alias="restore-hover">img/restore-hover.png</file>
+        <file alias="restore-pressed">img/restore-hover.png</file>
+        <file alias="delete">img/delete.png</file>
+        <file alias="delete-hover">img/delete-hover.png</file>
+        <file alias="delete-pressed">img/delete-hover.png</file>
+        <file alias="search">img/search.png</file>
+        <file alias="search-hover">img/search-hover.png</file>
+        <file alias="search-pressed">img/search-hover.png</file>
+        <file alias="upload">img/upload.png</file>
+        <file alias="upload-hover">img/upload.png</file>
+        <file alias="upload-pressed">img/upload.png</file>
+        <file alias="createfolder">img/createfolder.png</file>
+        <file alias="createfolder-hover">img/createfolder.png</file>
+        <file alias="createfolder-pressed">img/createfolder.png</file>
+        <file alias="folder">img/folder.png</file>
+        <file alias="download">img/download.png</file>
+        <file alias="download-hover">img/download-hover.png</file>
+        <file alias="download-pressed">img/download-hover.png</file>
+		<file alias="author">img/author.png</file>
+        <file alias="author-hover">img/author-hover.png</file>
+        <file alias="author-pressed">img/author.png</file>
+		<file alias="more">img/more.png</file>
+        <file alias="more-hover">img/more-hover.png</file>
+        <file alias="more-pressed">img/more-hover.png</file>
+        <file alias="pause">img/pause.png</file>
+        <file alias="pause-hover">img/pause.png</file>
+        <file alias="pause-pressed">img/pause.png</file>
+        <file alias="retry">img/retry.png</file>
+        <file alias="retry-hover">img/retry.png</file>
+        <file alias="retry-pressed">img/retry.png</file>
+        <file alias="quit">img/quit.png</file>
+        <file alias="quit-hover">img/quit.png</file>
+        <file alias="quit-pressed">img/quit.png</file>
+        <file alias="txt">img/txt.jpg</file>
+		<file alias="word">img/word.jpg</file>
+        <file alias="execl">img/execl.jpg</file>
+        <file alias="picture">img/picture.jpg</file>
+        <file alias="ppt">img/ppt.jpg</file>
+        <file alias="package">img/package.jpg</file>
+        <file alias="play">img/play.jpg</file>
+        <file alias="install">img/install.jpg</file>
+        <file alias="pdf">img/pdf.jpg</file>
+        <file alias="unknown">img/unknown.jpg</file>
+        <file alias="teamfolder">img/teamfolder.png</file>
+        <file alias="specfolder">img/specfolder.png</file>
+        <file alias="okbtn">img/okbtn.png</file>
+        <file alias="okbtn-hover">img/okbtn.png</file>
+        <file alias="okbtn-pressed">img/okbtn.png</file>
+        <file alias="cancelbtn">img/cancelbtn.png</file>
+        <file alias="cancelbtn-hover">img/cancelbtn.png</file>
+        <file alias="cancelbtn-pressed">img/cancelbtn.png</file>
+        <file alias="loading">img/loading.gif</file>
+        <file alias="sucess">img/sucess.png</file>
+		
+		<file alias="myselffile">img/myselffile.png</file>
+		<file alias="myselffile-hover">img/myselffile-hover.png</file>
+		<file alias="myselffile-pressed">img/myselffile-hover.png</file>
+		
+		<file alias="sharefile">img/sharefile.png</file>
+		<file alias="sharefile-hover">img/sharefile-hover.png</file>
+		<file alias="sharefile-pressed">img/sharefile-hover.png</file>
+		
+		<file alias="success">img/success.png</file>
+		<file alias="warning">img/warning.png</file>
+		<file alias="question">img/question.png</file>
+		<file alias="error">img/error.png</file>
+		<file alias="defalutlist">img/defalutlist.png</file>
+		
+		<file alias="addauhor">img/addauhor.png</file>
+		<file alias="addauhor-hover">img/addauhor-hover.png</file>
+		<file alias="addauhor-pressed">img/addauhor-hover.png</file>
+		
+		<file alias="viewfile">img/viewfile.png</file>
+		<file alias="viewfile-hover">img/viewfile-hover.png</file>
+		<file alias="viewfile-pressed">img/viewfile-hover.png</file>
+		<file alias="noauthormember">img/noauthormember.png</file>
+		
+		<file alias="arrow">img/arrow.png</file>
+		<file alias="arrow-down">img/arrow-down.png</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file alias="clouddisk">qss/clouddisk.qss</file>
+    </qresource>
+</RCC>
