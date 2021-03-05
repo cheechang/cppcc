@@ -1,0 +1,7 @@
+ListWidgetItem~~~line 23-24  font 12 消息列表布局大小（无边框设置）
+SortListWidgetItem~~~line 32 消息列表“消息摘要”字体大小
+MainWindows~~~line149
+MainWindows~~~line1002 “搜索”字体大小
+GroupAtSelectListWidget~~~line233 14 改变右侧聊天标题字体大小
+WindowsManager~~~line90 10-20 总体界面字体
+ChatTitle~~~line35 / line40 聊天窗口标题大小
